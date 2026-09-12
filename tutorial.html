@@ -7,29 +7,31 @@
 <title>计算神经科学入门 · 开玄 · 玄路</title>
 <meta name="description" content="从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./tutorial.css">
-<script src="./tutorial.js" defer></script>
+<link rel="stylesheet" href="./assets/site-fonts.css">
+<link rel="stylesheet" href="./tutorial-v2.css">
+<script src="./tutorial-v2.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#reader">跳到正文</a>
+<body data-page-title-zh="计算神经科学入门" data-page-title-en="Getting Started with Computational Neuroscience">
+<a class="skip-link" href="#reader"><span data-zh="跳到正文" data-en="Skip to article">跳到正文</span></a>
 <header class="site-header">
-  <div class="header-inner"><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页"><span class="brand-mark" aria-hidden="true">玄</span>开玄 <span class="wordmark-separator">·</span> 玄路</a><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./">返回首页 <span aria-hidden="true">↗</span></a></div></div>
+  <div class="header-inner"><div class="header-brand"><button id="language-toggle" class="language-toggle" type="button" aria-label="切换到英文" title="切换到英文" data-language="zh"><span lang="zh-CN" data-language-label="zh">中</span><span aria-hidden="true">/</span><span lang="en" data-language-label="en">EN</span></button><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页" data-aria-zh="开玄 · 玄路，返回首页" data-aria-en="KaiXuan · XuanRoad, home"><span class="brand-mark" aria-hidden="true">玄</span><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a></div><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./"><span data-zh="返回首页" data-en="Home">返回首页</span> <span aria-hidden="true">↗</span></a></div></div>
   <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
 </header>
 <main id="main">
   <div class="hero">
-    <p class="eyebrow"><span aria-hidden="true"></span>开玄的学习笔记 · 计算神经科学</p>
-    <p class="display-title">计算神经科学入门</p>
-    <p class="hero-lead">从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。</p>
-    <div class="hero-actions"><a class="primary-link" href="#unit1">从单元 1 开始 <span aria-hidden="true">↗</span></a><span class="start-note">第一次来，今天只做一个单元。</span></div>
-    <div class="hero-meta"><span>收录版本 · 2026.09</span><span>3 个起步单元</span><span>18 类资源</span><span>16 篇文献</span></div>
+    <p class="eyebrow"><span aria-hidden="true"></span><span data-zh="开玄的学习笔记 · 计算神经科学" data-en="KaiXuan’s notes · Computational neuroscience">开玄的学习笔记 · 计算神经科学</span></p>
+    <p data-zh="计算神经科学入门" data-en="Getting Started with Computational Neuroscience" class="display-title">计算神经科学入门</p>
+    <p data-zh="从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。" data-en="Begin with neural signals, code, and a simple model. Read with a question, complete a small task, then choose your direction." class="hero-lead">从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。</p>
+    <div class="hero-actions" data-show-lang="zh"><a class="primary-link" href="#unit1">从单元 1 开始 <span aria-hidden="true">↗</span></a><span class="start-note">第一次来，今天只做一个单元。</span></div><div class="hero-actions" data-show-lang="en" hidden><a class="primary-link" href="./tutorial-map.html?lang=en">Read the English resource map <span aria-hidden="true">↗</span></a></div>
+    <div class="hero-meta"><span data-zh="收录版本 · 2026.09" data-en="Edition · September 2026">收录版本 · 2026.09</span><span data-zh="3 个起步单元" data-en="3 starter units">3 个起步单元</span><span data-zh="18 类资源" data-en="18 resource categories">18 类资源</span><span data-zh="16 篇文献" data-en="16 selected papers">16 篇文献</span></div>
+    <div class="original-language-note" data-show-lang="en" lang="en" hidden><p>The article below is the author’s original Chinese text. The complete resource map is available in English.</p><a href="./tutorial-map.html?lang=en">Open the English resource map <span aria-hidden="true">↗</span></a></div>
   </div>
   <div class="reader-shell">
-    <nav class="view-tabs" aria-label="教程视图"><a href="./tutorial.html" aria-current="page">逐步导读</a><a href="./tutorial-map.html">18 类资源地图</a><a href="./tutorial-resources.html">文献索引</a></nav>
-    <section class="search-panel" aria-label="搜索本页内容">
+    <nav class="view-tabs" aria-label="教程视图" data-aria-zh="教程视图" data-aria-en="Tutorial views"><a href="./tutorial.html" aria-current="page"><span data-zh="逐步导读" data-en="Guided tutorial">逐步导读</span></a><a href="./tutorial-map.html"><span data-zh="18 类资源地图" data-en="18-category resource map">18 类资源地图</span></a><a href="./tutorial-resources.html"><span data-zh="文献索引" data-en="Reading index">文献索引</span></a></nav>
+    <section class="search-panel" aria-label="搜索本页内容" data-aria-zh="搜索本页内容" data-aria-en="Search this page">
       <form id="search-form" role="search">
-        <label for="section-search">查找本页</label>
-        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden>清除</button><button type="submit" class="search-submit">搜索</button></div>
+        <label for="section-search"><span data-zh="查找本页" data-en="Search this page">查找本页</span></label>
+        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" data-placeholder-zh="如 LIF、Python、交叉验证" data-placeholder-en="Try LIF, Python, or fMRI" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden><span data-zh="清除" data-en="Clear">清除</span></button><button type="submit" class="search-submit"><span data-zh="搜索" data-en="Search">搜索</span></button></div>
       </form>
       <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
       <ol id="search-results" class="search-results" hidden></ol>
@@ -38,28 +40,28 @@
     <div class="reading-layout">
       <aside class="toc-sidebar">
         <details class="toc-panel" id="toc-panel" open>
-          <summary>本页目录 <span aria-hidden="true">⌄</span></summary>
-          <nav class="toc-nav" aria-label="本页目录"><p class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#单元1神经元活动了我们到底看到了什么" data-toc>单元1：神经元“活动了”，我们到底看到了什么？</a></li>
-<li class="toc-level-3"><a href="#点开之前先理解" data-toc>点开之前先理解</a></li>
-<li class="toc-level-3"><a href="#这次只打开一章" data-toc>这次只打开一章</a></li>
-<li class="toc-level-3"><a href="#三个检查题答完就结束" data-toc>三个检查题，答完就结束</a></li>
-<li class="toc-level-2"><a href="#单元2第一次只学会读懂一段神经信号代码" data-toc>单元2：第一次只学会读懂一段神经信号代码</a></li>
-<li class="toc-level-2"><a href="#单元3持续输入多大神经元才会开始放电" data-toc>单元3：持续输入多大，神经元才会开始放电？</a></li>
-<li class="toc-level-3"><a href="#先把问题想清楚再看方程" data-toc>先把问题想清楚，再看方程</a></li>
-<li class="toc-level-3"><a href="#今天的阅读范围6090分钟" data-toc>今天的阅读范围：60–90分钟</a></li>
-<li class="toc-level-3"><a href="#在这里先预测带着答案进入练习" data-toc>在这里先预测，带着答案进入练习</a></li>
-<li class="toc-level-3"><a href="#过关标准与下一步" data-toc>过关标准与下一步</a></li>
-<li class="toc-level-2"><a href="#建模分支把刚才的四条规则写进brian2" data-toc>建模分支：把刚才的四条规则写进Brian2</a></li>
-<li class="toc-level-2"><a href="#eegmeg分支一段连续脑电怎样变成刺激后的平均反应" data-toc>EEG/MEG分支：一段连续脑电怎样变成“刺激后的平均反应”？</a></li>
-<li class="toc-level-2"><a href="#fmri分支能否从-fmri-判断被试看的是人脸还是房屋" data-toc>fMRI分支：能否从 fMRI 判断被试看的是人脸还是房屋？</a></li>
-<li class="toc-level-2"><a href="#论文也只读一小段选择一个分支" data-toc>论文也只读一小段：选择一个分支</a></li>
-<li class="toc-level-3"><a href="#neuroai-分支richards-et-al2019" data-toc>NeuroAI 分支：Richards et al.（2019）</a></li>
-<li class="toc-level-3"><a href="#数据分析分支kriegeskorte-et-al2009" data-toc>数据分析分支：Kriegeskorte et al.（2009）</a></li>
-<li class="toc-level-3"><a href="#神经群体与动力学分支cunningham--yu2014" data-toc>神经群体与动力学分支：Cunningham &amp; Yu（2014）</a></li>
-<li class="toc-level-2"><a href="#暂时没有放到首轮的资源什么时候再打开" data-toc>暂时没有放到首轮的资源，什么时候再打开？</a></li>
-<li class="toc-level-2"><a href="#给tutorial编写者一条推荐写到什么程度才够" data-toc>给tutorial编写者：一条推荐写到什么程度才够？</a></li></ol></nav>
+          <summary><span data-zh="本页目录" data-en="On this page">本页目录</span> <span aria-hidden="true">⌄</span></summary>
+          <nav class="toc-nav" aria-label="本页目录" data-aria-zh="本页目录" data-aria-en="On this page"><p data-zh="本页目录" data-en="On this page" class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#单元1神经元活动了我们到底看到了什么" data-toc><span data-zh="单元1：神经元“活动了”，我们到底看到了什么？" data-en="Unit 1: What do we measure when a neuron is active?">单元1：神经元“活动了”，我们到底看到了什么？</span></a></li>
+<li class="toc-level-3"><a href="#点开之前先理解" data-toc><span data-zh="点开之前先理解" data-en="Understand this before opening the resource">点开之前先理解</span></a></li>
+<li class="toc-level-3"><a href="#这次只打开一章" data-toc><span data-zh="这次只打开一章" data-en="Read just one chapter">这次只打开一章</span></a></li>
+<li class="toc-level-3"><a href="#三个检查题答完就结束" data-toc><span data-zh="三个检查题，答完就结束" data-en="Three checks, then stop">三个检查题，答完就结束</span></a></li>
+<li class="toc-level-2"><a href="#单元2第一次只学会读懂一段神经信号代码" data-toc><span data-zh="单元2：第一次只学会读懂一段神经信号代码" data-en="Unit 2: Read your first neural signal code">单元2：第一次只学会读懂一段神经信号代码</span></a></li>
+<li class="toc-level-2"><a href="#单元3持续输入多大神经元才会开始放电" data-toc><span data-zh="单元3：持续输入多大，神经元才会开始放电？" data-en="Unit 3: How much sustained input produces a spike?">单元3：持续输入多大，神经元才会开始放电？</span></a></li>
+<li class="toc-level-3"><a href="#先把问题想清楚再看方程" data-toc><span data-zh="先把问题想清楚，再看方程" data-en="Understand the question before the equation">先把问题想清楚，再看方程</span></a></li>
+<li class="toc-level-3"><a href="#今天的阅读范围6090分钟" data-toc><span data-zh="今天的阅读范围：60–90分钟" data-en="Today’s reading: 60–90 minutes">今天的阅读范围：60–90分钟</span></a></li>
+<li class="toc-level-3"><a href="#在这里先预测带着答案进入练习" data-toc><span data-zh="在这里先预测，带着答案进入练习" data-en="Make a prediction before the exercise">在这里先预测，带着答案进入练习</span></a></li>
+<li class="toc-level-3"><a href="#过关标准与下一步" data-toc><span data-zh="过关标准与下一步" data-en="Completion criteria and next steps">过关标准与下一步</span></a></li>
+<li class="toc-level-2"><a href="#建模分支把刚才的四条规则写进brian2" data-toc><span data-zh="建模分支：把刚才的四条规则写进Brian2" data-en="Modeling: implement four rules in Brian2">建模分支：把刚才的四条规则写进Brian2</span></a></li>
+<li class="toc-level-2"><a href="#eegmeg分支一段连续脑电怎样变成刺激后的平均反应" data-toc><span data-zh="EEG/MEG分支：一段连续脑电怎样变成“刺激后的平均反应”？" data-en="EEG/MEG: from continuous signals to an averaged response">EEG/MEG分支：一段连续脑电怎样变成“刺激后的平均反应”？</span></a></li>
+<li class="toc-level-2"><a href="#fmri分支能否从-fmri-判断被试看的是人脸还是房屋" data-toc><span data-zh="fMRI分支：能否从 fMRI 判断被试看的是人脸还是房屋？" data-en="fMRI: can we decode faces versus houses?">fMRI分支：能否从 fMRI 判断被试看的是人脸还是房屋？</span></a></li>
+<li class="toc-level-2"><a href="#论文也只读一小段选择一个分支" data-toc><span data-zh="论文也只读一小段：选择一个分支" data-en="Read a small part of a paper: choose a branch">论文也只读一小段：选择一个分支</span></a></li>
+<li class="toc-level-3"><a href="#neuroai-分支richards-et-al2019" data-toc><span data-zh="NeuroAI 分支：Richards et al.（2019）" data-en="NeuroAI: Richards et al. (2019)">NeuroAI 分支：Richards et al.（2019）</span></a></li>
+<li class="toc-level-3"><a href="#数据分析分支kriegeskorte-et-al2009" data-toc><span data-zh="数据分析分支：Kriegeskorte et al.（2009）" data-en="Data analysis: Kriegeskorte et al. (2009)">数据分析分支：Kriegeskorte et al.（2009）</span></a></li>
+<li class="toc-level-3"><a href="#神经群体与动力学分支cunningham--yu2014" data-toc><span data-zh="神经群体与动力学分支：Cunningham &amp; Yu（2014）" data-en="Neural populations and dynamics: Cunningham &amp; Yu (2014)">神经群体与动力学分支：Cunningham &amp; Yu（2014）</span></a></li>
+<li class="toc-level-2"><a href="#暂时没有放到首轮的资源什么时候再打开" data-toc><span data-zh="暂时没有放到首轮的资源，什么时候再打开？" data-en="When to explore the resources left for later">暂时没有放到首轮的资源，什么时候再打开？</span></a></li>
+<li class="toc-level-2"><a href="#给tutorial编写者一条推荐写到什么程度才够" data-toc><span data-zh="给tutorial编写者：一条推荐写到什么程度才够？" data-en="For tutorial authors: what makes a useful recommendation?">给tutorial编写者：一条推荐写到什么程度才够？</span></a></li></ol></nav>
         </details>
-        <div class="source-links"><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md">下载本页 Markdown <span aria-hidden="true">↓</span></a><a href="./references.bib" download>下载 BibTeX 引用 <span aria-hidden="true">↓</span></a></div>
+        <div class="source-links"><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md"><span data-zh="下载本页 Markdown" data-en="Download original Markdown">下载本页 Markdown</span> <span aria-hidden="true">↓</span></a><a href="./references.bib" download><span data-zh="下载 BibTeX 引用" data-en="Download BibTeX citations">下载 BibTeX 引用</span> <span aria-hidden="true">↓</span></a></div>
       </aside>
       <article class="reader" id="reader" tabindex="-1" lang="zh-CN">
         <section aria-labelledby="计算神经科学从点开资源到完成第一个任务" class="reader-section"><h1 id="计算神经科学从点开资源到完成第一个任务" tabindex="-1">计算神经科学：从点开资源到完成第一个任务</h1>
@@ -117,7 +119,7 @@
 <p>右边第一项把电位拉回静息值；第二项表示输入电流的作用；时间常数(\tau_m)控制变化有多快。暂时不会解方程也能先做预测：对一个持续不变的电流，若不触发重置，电位最终趋向 <strong>静息电位＋电阻×电流</strong>。</p>
 <h3 id="在这里先预测带着答案进入练习" tabindex="-1">在这里先预测，带着答案进入练习</h3>
 <p>下面使用配套练习页公开的默认值：静息电位−70 mV、阈值−50 mV、电阻10 MΩ。假设从静息值出发、无噪声、输入持续足够长。</p>
-<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<div aria-label="可横向滚动的表格" class="table-scroll" data-aria-en="Horizontally scrollable table" data-aria-zh="可横向滚动的表格" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>输入电流</th>
@@ -205,7 +207,7 @@
 <p><strong>第一遍到此停止。</strong> 暂不查 Table 1 的全部方法，也不要求推导矩阵公式或理解 Figure 4b、4c。读完应能解释降维解决什么问题，以及它会丢掉什么。</p>
 <p><strong>读后任务。</strong> 纸笔检查四个群体状态：(1,0,1)、(0,1,1)、(1,1,2)、(2,1,3)。找出第三个数与前两个数的关系，说明为何两个数足以描述这些点。<strong>检查点：</strong> 第三个数等于前两个数之和，因此这些点位于二维平面；这只是教学构造的关系，不能据此证明真实大脑只有两个状态变量，也不能保证 PCA 保留的是与行为最相关的变化。</p>
 </section><section aria-labelledby="暂时没有放到首轮的资源什么时候再打开" class="reader-section"><h2 id="暂时没有放到首轮的资源什么时候再打开" tabindex="-1">暂时没有放到首轮的资源，什么时候再打开？</h2>
-<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<div aria-label="可横向滚动的表格" class="table-scroll" data-aria-en="Horizontally scrollable table" data-aria-zh="可横向滚动的表格" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>资源</th>
@@ -242,11 +244,11 @@
 <p>每次更新，先完成一个学习单元：问题引入→必要概念的中文解释→小节/图号导航→第一次任务→参考检查点→卡住时的回补位置。课程简介、难度和时长放在旁边帮助选择，不承担全部教学解释。论文也采用同样方式，不能仅在题名后写“学习PCA”或“理解NeuroAI”。</p>
 <p>本版于2026-09-08对照官方课程小节与三篇论文的实际图注/相关正文编写。教学例子与解释为本稿组织；时间为估计。首轮任务可通过阅读和纸笔完成；本次没有运行外部notebook或下载课程数据集。书目与资源许可核查记录、全文定位证据在<code>evidence/</code>；完整引文在<code>references.bib</code>。</p>
 </section>
-        <div class="article-end" lang="zh-CN"><span>读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main">回到顶部 ↑</a></div>
+        <div class="article-end" lang="zh-CN" data-interface-language><span data-zh="读到这里，可以回到当前问题，完成一个小任务。" data-en="Return to your current question and complete one small task.">读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
       </article>
     </div>
   </div>
 </main>
-<footer class="site-footer"><a href="./">开玄 · 玄路</a><span>在代码、思想与未知之间。</span><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md">原稿下载 ↓</a></footer>
+<footer class="site-footer"><a href="./"><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a><span data-zh="在代码、思想与未知之间。" data-en="Between code, thought, and the unknown.">在代码、思想与未知之间。</span><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md"><span data-zh="原稿下载" data-en="Download original">原稿下载</span> ↓</a><a class="font-credit" href="./assets/ALIMAMA-DAOLI-LICENSE.txt"><span data-zh="中文字体：阿里妈妈刀隶体" data-en="Chinese font: Alimama DaoLiTi">中文字体：阿里妈妈刀隶体</span></a></footer>
 </body>
 </html>

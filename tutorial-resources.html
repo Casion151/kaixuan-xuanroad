@@ -7,29 +7,31 @@
 <title>资源与文献索引 · 开玄 · 玄路</title>
 <meta name="description" content="查找课程入口、实践工具与 16 篇分层文献。先选择问题，再回到相应的资源与阅读卡片。">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./tutorial.css">
-<script src="./tutorial.js" defer></script>
+<link rel="stylesheet" href="./assets/site-fonts.css">
+<link rel="stylesheet" href="./tutorial-v2.css">
+<script src="./tutorial-v2.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#reader">跳到正文</a>
+<body data-page-title-zh="资源与文献索引" data-page-title-en="Resources &amp; Reading Index">
+<a class="skip-link" href="#reader"><span data-zh="跳到正文" data-en="Skip to article">跳到正文</span></a>
 <header class="site-header">
-  <div class="header-inner"><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页"><span class="brand-mark" aria-hidden="true">玄</span>开玄 <span class="wordmark-separator">·</span> 玄路</a><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./">返回首页 <span aria-hidden="true">↗</span></a></div></div>
+  <div class="header-inner"><div class="header-brand"><button id="language-toggle" class="language-toggle" type="button" aria-label="切换到英文" title="切换到英文" data-language="zh"><span lang="zh-CN" data-language-label="zh">中</span><span aria-hidden="true">/</span><span lang="en" data-language-label="en">EN</span></button><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页" data-aria-zh="开玄 · 玄路，返回首页" data-aria-en="KaiXuan · XuanRoad, home"><span class="brand-mark" aria-hidden="true">玄</span><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a></div><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./"><span data-zh="返回首页" data-en="Home">返回首页</span> <span aria-hidden="true">↗</span></a></div></div>
   <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
 </header>
 <main id="main">
   <div class="hero">
-    <p class="eyebrow"><span aria-hidden="true"></span>开玄的学习笔记 · 查询与延伸</p>
-    <p class="display-title">资源与文献索引</p>
-    <p class="hero-lead">查找课程入口、实践工具与 16 篇分层文献。先选择问题，再回到相应的资源与阅读卡片。</p>
-    <div class="hero-actions"><a class="primary-link" href="./references.bib" download>下载 BibTeX 引用 <span aria-hidden="true">↓</span></a></div>
-    <div class="hero-meta"><span>收录版本 · 2026.09</span><span>3 个起步单元</span><span>18 类资源</span><span>16 篇文献</span></div>
+    <p class="eyebrow"><span aria-hidden="true"></span><span data-zh="开玄的学习笔记 · 查询与延伸" data-en="KaiXuan’s notes · Resources and further reading">开玄的学习笔记 · 查询与延伸</span></p>
+    <p data-zh="资源与文献索引" data-en="Resources &amp; Reading Index" class="display-title">资源与文献索引</p>
+    <p data-zh="查找课程入口、实践工具与 16 篇分层文献。先选择问题，再回到相应的资源与阅读卡片。" data-en="Find course entry points, practical tools, and 16 selected papers. Choose a question, then return to the relevant resources and reading cards." class="hero-lead">查找课程入口、实践工具与 16 篇分层文献。先选择问题，再回到相应的资源与阅读卡片。</p>
+    <div class="hero-actions"><a class="primary-link" href="./references.bib" download><span data-zh="下载 BibTeX 引用" data-en="Download BibTeX citations">下载 BibTeX 引用</span> <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-meta"><span data-zh="收录版本 · 2026.09" data-en="Edition · September 2026">收录版本 · 2026.09</span><span data-zh="3 个起步单元" data-en="3 starter units">3 个起步单元</span><span data-zh="18 类资源" data-en="18 resource categories">18 类资源</span><span data-zh="16 篇文献" data-en="16 selected papers">16 篇文献</span></div>
+    <div class="original-language-note" data-show-lang="en" lang="en" hidden><p>The article below is the author’s original Chinese text. The complete resource map is available in English.</p><a href="./tutorial-map.html?lang=en">Open the English resource map <span aria-hidden="true">↗</span></a></div>
   </div>
   <div class="reader-shell">
-    <nav class="view-tabs" aria-label="教程视图"><a href="./tutorial.html">逐步导读</a><a href="./tutorial-map.html">18 类资源地图</a><a href="./tutorial-resources.html" aria-current="page">文献索引</a></nav>
-    <section class="search-panel" aria-label="搜索本页内容">
+    <nav class="view-tabs" aria-label="教程视图" data-aria-zh="教程视图" data-aria-en="Tutorial views"><a href="./tutorial.html"><span data-zh="逐步导读" data-en="Guided tutorial">逐步导读</span></a><a href="./tutorial-map.html"><span data-zh="18 类资源地图" data-en="18-category resource map">18 类资源地图</span></a><a href="./tutorial-resources.html" aria-current="page"><span data-zh="文献索引" data-en="Reading index">文献索引</span></a></nav>
+    <section class="search-panel" aria-label="搜索本页内容" data-aria-zh="搜索本页内容" data-aria-en="Search this page">
       <form id="search-form" role="search">
-        <label for="section-search">查找本页</label>
-        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden>清除</button><button type="submit" class="search-submit">搜索</button></div>
+        <label for="section-search"><span data-zh="查找本页" data-en="Search this page">查找本页</span></label>
+        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" data-placeholder-zh="如 LIF、Python、交叉验证" data-placeholder-en="Try LIF, Python, or fMRI" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden><span data-zh="清除" data-en="Clear">清除</span></button><button type="submit" class="search-submit"><span data-zh="搜索" data-en="Search">搜索</span></button></div>
       </form>
       <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
       <ol id="search-results" class="search-results" hidden></ol>
@@ -38,39 +40,39 @@
     <div class="reading-layout">
       <aside class="toc-sidebar">
         <details class="toc-panel" id="toc-panel" open>
-          <summary>本页目录 <span aria-hidden="true">⌄</span></summary>
-          <nav class="toc-nav" aria-label="本页目录"><p class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#1-纳入原-tutorial-的方式" data-toc>1. 纳入原 tutorial 的方式</a></li>
-<li class="toc-level-2"><a href="#2-主课选择继续使用原清单中的资源" data-toc>2. 主课选择：继续使用原清单中的资源</a></li>
-<li class="toc-level-2"><a href="#3-补充资源优先级入口与交付物" data-toc>3. 补充资源：优先级、入口与交付物</a></li>
-<li class="toc-level-3"><a href="#r01--neuroscience-onlineuthealth-mcgovern-medical-school" data-toc>R01 · Neuroscience Online（UTHealth McGovern Medical School）</a></li>
-<li class="toc-level-3"><a href="#r02--neuronal-dynamics-在线书配套-python-exercises" data-toc>R02 · Neuronal Dynamics 在线书＋配套 Python Exercises</a></li>
-<li class="toc-level-3"><a href="#r03--brian2-官方交互教程" data-toc>R03 · Brian2 官方交互教程</a></li>
-<li class="toc-level-3"><a href="#r04--mne-python-官方-megeeg-教程" data-toc>R04 · MNE-Python 官方 MEG/EEG 教程</a></li>
-<li class="toc-level-3"><a href="#r05--nilearn-官方-fmri-入门与-haxby-解码示例" data-toc>R05 · Nilearn 官方 fMRI 入门与 Haxby 解码示例</a></li>
-<li class="toc-level-3"><a href="#r06--allensdk-visual-coding-neuropixels-quick-start" data-toc>R06 · AllenSDK Visual Coding Neuropixels Quick Start</a></li>
-<li class="toc-level-3"><a href="#r07--dandistreaming-and-interacting-with-nwb-data" data-toc>R07 · DANDI：Streaming and interacting with NWB data</a></li>
-<li class="toc-level-2"><a href="#4-文献从哪里开始" data-toc>4. 文献从哪里开始</a></li>
-<li class="toc-level-2"><a href="#5-文献卡片16-篇" data-toc>5. 文献卡片（16 篇）</a></li>
-<li class="toc-level-3"><a href="#p01--abbott-2008" data-toc>P01 · Abbott (2008)</a></li>
-<li class="toc-level-3"><a href="#p02--kriegeskorte-et-al-2009" data-toc>P02 · Kriegeskorte et al. (2009)</a></li>
-<li class="toc-level-3"><a href="#p03--izhikevich-2003" data-toc>P03 · Izhikevich (2003)</a></li>
-<li class="toc-level-3"><a href="#p04--hodgkin--huxley-1952" data-toc>P04 · Hodgkin &amp; Huxley (1952)</a></li>
-<li class="toc-level-3"><a href="#p05--schwartz-et-al-2006" data-toc>P05 · Schwartz et al. (2006)</a></li>
-<li class="toc-level-3"><a href="#p06--cunningham--yu-2014" data-toc>P06 · Cunningham &amp; Yu (2014)</a></li>
-<li class="toc-level-3"><a href="#p07--varoquaux-et-al-2017" data-toc>P07 · Varoquaux et al. (2017)</a></li>
-<li class="toc-level-3"><a href="#p08--jonas--kording-2017" data-toc>P08 · Jonas &amp; Kording (2017)</a></li>
-<li class="toc-level-3"><a href="#p09--vyas-et-al-2020" data-toc>P09 · Vyas et al. (2020)</a></li>
-<li class="toc-level-3"><a href="#p10--sussillo--barak-2013" data-toc>P10 · Sussillo &amp; Barak (2013)</a></li>
-<li class="toc-level-3"><a href="#p11--richards-et-al-2019" data-toc>P11 · Richards et al. (2019)</a></li>
-<li class="toc-level-3"><a href="#p12--kriegeskorte-et-al-2008" data-toc>P12 · Kriegeskorte et al. (2008)</a></li>
-<li class="toc-level-3"><a href="#p13--yang-et-al-2019" data-toc>P13 · Yang et al. (2019)</a></li>
-<li class="toc-level-3"><a href="#p14--schultz-et-al-1997" data-toc>P14 · Schultz et al. (1997)</a></li>
-<li class="toc-level-3"><a href="#p15--sadtler-et-al-2014" data-toc>P15 · Sadtler et al. (2014)</a></li>
-<li class="toc-level-3"><a href="#p16--willett-et-al-2023" data-toc>P16 · Willett et al. (2023)</a></li>
-<li class="toc-level-2"><a href="#6-可直接加入第-8-页的论文阅读卡" data-toc>6. 可直接加入第 8 页的论文阅读卡</a></li>
-<li class="toc-level-2"><a href="#7-核查范围与维护" data-toc>7. 核查范围与维护</a></li></ol></nav>
+          <summary><span data-zh="本页目录" data-en="On this page">本页目录</span> <span aria-hidden="true">⌄</span></summary>
+          <nav class="toc-nav" aria-label="本页目录" data-aria-zh="本页目录" data-aria-en="On this page"><p data-zh="本页目录" data-en="On this page" class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#1-纳入原-tutorial-的方式" data-toc><span data-zh="1. 纳入原 tutorial 的方式" data-en="1. How to integrate these resources">1. 纳入原 tutorial 的方式</span></a></li>
+<li class="toc-level-2"><a href="#2-主课选择继续使用原清单中的资源" data-toc><span data-zh="2. 主课选择：继续使用原清单中的资源" data-en="2. Choose one core course">2. 主课选择：继续使用原清单中的资源</span></a></li>
+<li class="toc-level-2"><a href="#3-补充资源优先级入口与交付物" data-toc><span data-zh="3. 补充资源：优先级、入口与交付物" data-en="3. Supplementary resources and practical outputs">3. 补充资源：优先级、入口与交付物</span></a></li>
+<li class="toc-level-3"><a href="#r01--neuroscience-onlineuthealth-mcgovern-medical-school" data-toc><span data-zh="R01 · Neuroscience Online（UTHealth McGovern Medical School）" data-en="R01 · Neuroscience Online (UTHealth McGovern Medical School)">R01 · Neuroscience Online（UTHealth McGovern Medical School）</span></a></li>
+<li class="toc-level-3"><a href="#r02--neuronal-dynamics-在线书配套-python-exercises" data-toc><span data-zh="R02 · Neuronal Dynamics 在线书＋配套 Python Exercises" data-en="R02 · Neuronal Dynamics book and Python exercises">R02 · Neuronal Dynamics 在线书＋配套 Python Exercises</span></a></li>
+<li class="toc-level-3"><a href="#r03--brian2-官方交互教程" data-toc><span data-zh="R03 · Brian2 官方交互教程" data-en="R03 · Brian2 interactive tutorials">R03 · Brian2 官方交互教程</span></a></li>
+<li class="toc-level-3"><a href="#r04--mne-python-官方-megeeg-教程" data-toc><span data-zh="R04 · MNE-Python 官方 MEG/EEG 教程" data-en="R04 · MNE-Python MEG/EEG tutorials">R04 · MNE-Python 官方 MEG/EEG 教程</span></a></li>
+<li class="toc-level-3"><a href="#r05--nilearn-官方-fmri-入门与-haxby-解码示例" data-toc><span data-zh="R05 · Nilearn 官方 fMRI 入门与 Haxby 解码示例" data-en="R05 · Nilearn fMRI and Haxby decoding examples">R05 · Nilearn 官方 fMRI 入门与 Haxby 解码示例</span></a></li>
+<li class="toc-level-3"><a href="#r06--allensdk-visual-coding-neuropixels-quick-start" data-toc><span data-zh="R06 · AllenSDK Visual Coding Neuropixels Quick Start" data-en="R06 · AllenSDK Visual Coding Neuropixels Quick Start">R06 · AllenSDK Visual Coding Neuropixels Quick Start</span></a></li>
+<li class="toc-level-3"><a href="#r07--dandistreaming-and-interacting-with-nwb-data" data-toc><span data-zh="R07 · DANDI：Streaming and interacting with NWB data" data-en="R07 · DANDI: Streaming and interacting with NWB data">R07 · DANDI：Streaming and interacting with NWB data</span></a></li>
+<li class="toc-level-2"><a href="#4-文献从哪里开始" data-toc><span data-zh="4. 文献从哪里开始" data-en="4. Where to begin reading papers">4. 文献从哪里开始</span></a></li>
+<li class="toc-level-2"><a href="#5-文献卡片16-篇" data-toc><span data-zh="5. 文献卡片（16 篇）" data-en="5. Reading cards: 16 papers">5. 文献卡片（16 篇）</span></a></li>
+<li class="toc-level-3"><a href="#p01--abbott-2008" data-toc><span data-zh="P01 · Abbott (2008)" data-en="P01 · Abbott (2008)">P01 · Abbott (2008)</span></a></li>
+<li class="toc-level-3"><a href="#p02--kriegeskorte-et-al-2009" data-toc><span data-zh="P02 · Kriegeskorte et al. (2009)" data-en="P02 · Kriegeskorte et al. (2009)">P02 · Kriegeskorte et al. (2009)</span></a></li>
+<li class="toc-level-3"><a href="#p03--izhikevich-2003" data-toc><span data-zh="P03 · Izhikevich (2003)" data-en="P03 · Izhikevich (2003)">P03 · Izhikevich (2003)</span></a></li>
+<li class="toc-level-3"><a href="#p04--hodgkin--huxley-1952" data-toc><span data-zh="P04 · Hodgkin &amp; Huxley (1952)" data-en="P04 · Hodgkin &amp; Huxley (1952)">P04 · Hodgkin &amp; Huxley (1952)</span></a></li>
+<li class="toc-level-3"><a href="#p05--schwartz-et-al-2006" data-toc><span data-zh="P05 · Schwartz et al. (2006)" data-en="P05 · Schwartz et al. (2006)">P05 · Schwartz et al. (2006)</span></a></li>
+<li class="toc-level-3"><a href="#p06--cunningham--yu-2014" data-toc><span data-zh="P06 · Cunningham &amp; Yu (2014)" data-en="P06 · Cunningham &amp; Yu (2014)">P06 · Cunningham &amp; Yu (2014)</span></a></li>
+<li class="toc-level-3"><a href="#p07--varoquaux-et-al-2017" data-toc><span data-zh="P07 · Varoquaux et al. (2017)" data-en="P07 · Varoquaux et al. (2017)">P07 · Varoquaux et al. (2017)</span></a></li>
+<li class="toc-level-3"><a href="#p08--jonas--kording-2017" data-toc><span data-zh="P08 · Jonas &amp; Kording (2017)" data-en="P08 · Jonas &amp; Kording (2017)">P08 · Jonas &amp; Kording (2017)</span></a></li>
+<li class="toc-level-3"><a href="#p09--vyas-et-al-2020" data-toc><span data-zh="P09 · Vyas et al. (2020)" data-en="P09 · Vyas et al. (2020)">P09 · Vyas et al. (2020)</span></a></li>
+<li class="toc-level-3"><a href="#p10--sussillo--barak-2013" data-toc><span data-zh="P10 · Sussillo &amp; Barak (2013)" data-en="P10 · Sussillo &amp; Barak (2013)">P10 · Sussillo &amp; Barak (2013)</span></a></li>
+<li class="toc-level-3"><a href="#p11--richards-et-al-2019" data-toc><span data-zh="P11 · Richards et al. (2019)" data-en="P11 · Richards et al. (2019)">P11 · Richards et al. (2019)</span></a></li>
+<li class="toc-level-3"><a href="#p12--kriegeskorte-et-al-2008" data-toc><span data-zh="P12 · Kriegeskorte et al. (2008)" data-en="P12 · Kriegeskorte et al. (2008)">P12 · Kriegeskorte et al. (2008)</span></a></li>
+<li class="toc-level-3"><a href="#p13--yang-et-al-2019" data-toc><span data-zh="P13 · Yang et al. (2019)" data-en="P13 · Yang et al. (2019)">P13 · Yang et al. (2019)</span></a></li>
+<li class="toc-level-3"><a href="#p14--schultz-et-al-1997" data-toc><span data-zh="P14 · Schultz et al. (1997)" data-en="P14 · Schultz et al. (1997)">P14 · Schultz et al. (1997)</span></a></li>
+<li class="toc-level-3"><a href="#p15--sadtler-et-al-2014" data-toc><span data-zh="P15 · Sadtler et al. (2014)" data-en="P15 · Sadtler et al. (2014)">P15 · Sadtler et al. (2014)</span></a></li>
+<li class="toc-level-3"><a href="#p16--willett-et-al-2023" data-toc><span data-zh="P16 · Willett et al. (2023)" data-en="P16 · Willett et al. (2023)">P16 · Willett et al. (2023)</span></a></li>
+<li class="toc-level-2"><a href="#6-可直接加入第-8-页的论文阅读卡" data-toc><span data-zh="6. 可直接加入第 8 页的论文阅读卡" data-en="6. A reusable paper-reading card">6. 可直接加入第 8 页的论文阅读卡</span></a></li>
+<li class="toc-level-2"><a href="#7-核查范围与维护" data-toc><span data-zh="7. 核查范围与维护" data-en="7. Verification scope and maintenance">7. 核查范围与维护</span></a></li></ol></nav>
         </details>
-        <div class="source-links"><a href="./tutorial-resources.md" download="资源与文献索引.md">下载本页 Markdown <span aria-hidden="true">↓</span></a><a href="./references.bib" download>下载 BibTeX 引用 <span aria-hidden="true">↓</span></a></div>
+        <div class="source-links"><a href="./tutorial-resources.md" download="资源与文献索引.md"><span data-zh="下载本页 Markdown" data-en="Download original Markdown">下载本页 Markdown</span> <span aria-hidden="true">↓</span></a><a href="./references.bib" download><span data-zh="下载 BibTeX 引用" data-en="Download BibTeX citations">下载 BibTeX 引用</span> <span aria-hidden="true">↓</span></a></div>
       </aside>
       <article class="reader" id="reader" tabindex="-1" lang="zh-CN">
         <section aria-labelledby="计算神经科学资源与文献索引" class="reader-section"><h1 id="计算神经科学资源与文献索引" tabindex="-1">计算神经科学：资源与文献索引</h1>
@@ -79,7 +81,7 @@
 <p>本稿整理 7 项补充资源（其中 AllenSDK、DANDI 是原有条目的实践化）、3 个原有主课的明确入口，以及 16 篇分层文献（13 篇新增、3 篇原有资源的规范整理）。推荐范围和练习由本次编排提出，不代表课程官方要求。</p>
 </section><section aria-labelledby="1-纳入原-tutorial-的方式" class="reader-section"><h2 id="1-纳入原-tutorial-的方式" tabindex="-1">1. 纳入原 tutorial 的方式</h2>
 <p>主课只选一门。先补与自身背景不匹配的先修，再完成一个小练习，随后根据项目问题进入文献。单神经元模型、神经数据分析、NeuroAI 和 BCI 的选修资源无需全部学习。</p>
-<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<div aria-label="可横向滚动的表格" class="table-scroll" data-aria-en="Horizontally scrollable table" data-aria-zh="可横向滚动的表格" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>原文位置</th>
@@ -121,7 +123,7 @@
 </tbody>
 </table></div>
 </section><section aria-labelledby="2-主课选择继续使用原清单中的资源" class="reader-section"><h2 id="2-主课选择继续使用原清单中的资源" tabindex="-1">2. 主课选择：继续使用原清单中的资源</h2>
-<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<div aria-label="可横向滚动的表格" class="table-scroll" data-aria-en="Horizontally scrollable table" data-aria-zh="可横向滚动的表格" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>主课</th>
@@ -197,7 +199,7 @@
 <p>这里具体练习 NWB 数据读取；BIDS 是另一项规范，按项目的数据模态另行学习。</p>
 </section><section aria-labelledby="4-文献从哪里开始" class="reader-section"><h2 id="4-文献从哪里开始" tabindex="-1">4. 文献从哪里开始</h2>
 <p>文献按当前问题选读，经典论文不按年代顺序一律前置。尤其是 Hodgkin–Huxley 原文，应在现代教材和 LIF 练习之后作为历史进阶阅读。下面的箭头表示建议顺序，不表示必须全文精读所有条目。</p>
-<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<div aria-label="可横向滚动的表格" class="table-scroll" data-aria-en="Horizontally scrollable table" data-aria-zh="可横向滚动的表格" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>路线</th>
@@ -389,11 +391,11 @@
 <p>重新发布 tutorial 前，建议逐条确认主线 notebook 的依赖、数据大小和最小运行结果；给课程标注版本，给论文保存 DOI。原有 Neuromatch、Dayan &amp; Abbott 等资源继续保留，新增条目用于补足明确的学习任务。</p>
 <p>同目录文件：<code>references.bib</code> 为16篇规范引文；<code>evidence/</code> 保存课程和文献核查记录；<code>build_supplement.py</code> 为从核验数据生成此清单和BibTeX的脚本。</p>
 </section>
-        <div class="article-end" lang="zh-CN"><span>读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main">回到顶部 ↑</a></div>
+        <div class="article-end" lang="zh-CN" data-interface-language><span data-zh="读到这里，可以回到当前问题，完成一个小任务。" data-en="Return to your current question and complete one small task.">读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
       </article>
     </div>
   </div>
 </main>
-<footer class="site-footer"><a href="./">开玄 · 玄路</a><span>在代码、思想与未知之间。</span><a href="./tutorial-resources.md" download="资源与文献索引.md">原稿下载 ↓</a></footer>
+<footer class="site-footer"><a href="./"><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a><span data-zh="在代码、思想与未知之间。" data-en="Between code, thought, and the unknown.">在代码、思想与未知之间。</span><a href="./tutorial-resources.md" download="资源与文献索引.md"><span data-zh="原稿下载" data-en="Download original">原稿下载</span> ↓</a><a class="font-credit" href="./assets/ALIMAMA-DAOLI-LICENSE.txt"><span data-zh="中文字体：阿里妈妈刀隶体" data-en="Chinese font: Alimama DaoLiTi">中文字体：阿里妈妈刀隶体</span></a></footer>
 </body>
 </html>
