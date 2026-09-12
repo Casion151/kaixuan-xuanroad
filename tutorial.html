@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090d13">
+<title>计算神经科学入门 · 开玄 · 玄路</title>
+<meta name="description" content="从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./tutorial.css">
+<script src="./tutorial.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#reader">跳到正文</a>
+<header class="site-header">
+  <div class="header-inner"><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页"><span class="brand-mark" aria-hidden="true">玄</span>开玄 <span class="wordmark-separator">·</span> 玄路</a><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./">返回首页 <span aria-hidden="true">↗</span></a></div></div>
+  <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
+</header>
+<main id="main">
+  <div class="hero">
+    <p class="eyebrow"><span aria-hidden="true"></span>开玄的学习笔记 · 计算神经科学</p>
+    <p class="display-title">计算神经科学入门</p>
+    <p class="hero-lead">从神经信号、代码与简单模型开始。带着一个问题阅读，完成一个小任务，再走向自己的方向。</p>
+    <div class="hero-actions"><a class="primary-link" href="#unit1">从单元 1 开始 <span aria-hidden="true">↗</span></a><span class="start-note">第一次来，今天只做一个单元。</span></div>
+    <div class="hero-meta"><span>收录版本 · 2026.09</span><span>3 个起步单元</span><span>18 类资源</span><span>16 篇文献</span></div>
+  </div>
+  <div class="reader-shell">
+    <nav class="view-tabs" aria-label="教程视图"><a href="./tutorial.html" aria-current="page">逐步导读</a><a href="./tutorial-map.html">18 类资源地图</a><a href="./tutorial-resources.html">文献索引</a></nav>
+    <section class="search-panel" aria-label="搜索本页内容">
+      <form id="search-form" role="search">
+        <label for="section-search">查找本页</label>
+        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden>清除</button><button type="submit" class="search-submit">搜索</button></div>
+      </form>
+      <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+      <ol id="search-results" class="search-results" hidden></ol>
+      <noscript><p class="noscript-note">页面搜索需要 JavaScript。也可以使用浏览器的“在页面中查找”，或通过目录阅读。</p></noscript>
+    </section>
+    <div class="reading-layout">
+      <aside class="toc-sidebar">
+        <details class="toc-panel" id="toc-panel" open>
+          <summary>本页目录 <span aria-hidden="true">⌄</span></summary>
+          <nav class="toc-nav" aria-label="本页目录"><p class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#单元1神经元活动了我们到底看到了什么" data-toc>单元1：神经元“活动了”，我们到底看到了什么？</a></li>
+<li class="toc-level-3"><a href="#点开之前先理解" data-toc>点开之前先理解</a></li>
+<li class="toc-level-3"><a href="#这次只打开一章" data-toc>这次只打开一章</a></li>
+<li class="toc-level-3"><a href="#三个检查题答完就结束" data-toc>三个检查题，答完就结束</a></li>
+<li class="toc-level-2"><a href="#单元2第一次只学会读懂一段神经信号代码" data-toc>单元2：第一次只学会读懂一段神经信号代码</a></li>
+<li class="toc-level-2"><a href="#单元3持续输入多大神经元才会开始放电" data-toc>单元3：持续输入多大，神经元才会开始放电？</a></li>
+<li class="toc-level-3"><a href="#先把问题想清楚再看方程" data-toc>先把问题想清楚，再看方程</a></li>
+<li class="toc-level-3"><a href="#今天的阅读范围6090分钟" data-toc>今天的阅读范围：60–90分钟</a></li>
+<li class="toc-level-3"><a href="#在这里先预测带着答案进入练习" data-toc>在这里先预测，带着答案进入练习</a></li>
+<li class="toc-level-3"><a href="#过关标准与下一步" data-toc>过关标准与下一步</a></li>
+<li class="toc-level-2"><a href="#建模分支把刚才的四条规则写进brian2" data-toc>建模分支：把刚才的四条规则写进Brian2</a></li>
+<li class="toc-level-2"><a href="#eegmeg分支一段连续脑电怎样变成刺激后的平均反应" data-toc>EEG/MEG分支：一段连续脑电怎样变成“刺激后的平均反应”？</a></li>
+<li class="toc-level-2"><a href="#fmri分支能否从-fmri-判断被试看的是人脸还是房屋" data-toc>fMRI分支：能否从 fMRI 判断被试看的是人脸还是房屋？</a></li>
+<li class="toc-level-2"><a href="#论文也只读一小段选择一个分支" data-toc>论文也只读一小段：选择一个分支</a></li>
+<li class="toc-level-3"><a href="#neuroai-分支richards-et-al2019" data-toc>NeuroAI 分支：Richards et al.（2019）</a></li>
+<li class="toc-level-3"><a href="#数据分析分支kriegeskorte-et-al2009" data-toc>数据分析分支：Kriegeskorte et al.（2009）</a></li>
+<li class="toc-level-3"><a href="#神经群体与动力学分支cunningham--yu2014" data-toc>神经群体与动力学分支：Cunningham &amp; Yu（2014）</a></li>
+<li class="toc-level-2"><a href="#暂时没有放到首轮的资源什么时候再打开" data-toc>暂时没有放到首轮的资源，什么时候再打开？</a></li>
+<li class="toc-level-2"><a href="#给tutorial编写者一条推荐写到什么程度才够" data-toc>给tutorial编写者：一条推荐写到什么程度才够？</a></li></ol></nav>
+        </details>
+        <div class="source-links"><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md">下载本页 Markdown <span aria-hidden="true">↓</span></a><a href="./references.bib" download>下载 BibTeX 引用 <span aria-hidden="true">↓</span></a></div>
+      </aside>
+      <article class="reader" id="reader" tabindex="-1" lang="zh-CN">
+        <section aria-labelledby="计算神经科学从点开资源到完成第一个任务" class="reader-section"><h1 id="计算神经科学从点开资源到完成第一个任务" tabindex="-1">计算神经科学：从点开资源到完成第一个任务</h1>
+<p>这是一份给初学者的逐步导读。每个单元先解释问题，再让你进入外部资源的一小段；先完成当前任务，再决定是否继续。课程全集、工具文档和16篇完整书目放在<a href="./tutorial-resources.html">资源与文献索引</a>，需要查询时再打开。</p>
+<p><strong>第一次来：今天只做单元1。</strong> 用30–45分钟理解“电压曲线”和“放电时刻”有什么不同，回答三个问题，到此结束。如果这些已经熟悉，直接做单元2的自测；不会的地方再回补。时间是本导读的估计，不是完成要求。</p>
+<p>默认顺序是：<a href="#unit1">1 看懂神经信号</a> → <a href="#unit2">2 看懂代码中的时间与数组</a> → <a href="#unit3">3 用一个简单模型作预测</a>。之后只选一个方向：<a href="#model-branch">建模</a>、<a href="#data-branch">EEG/MEG</a>、<a href="#fmri-branch">fMRI解码</a>，或<a href="#paper-branch">NeuroAI文献</a>。还不知道方向时，先完成单元3即可。</p>
+<p>阅读网页时，先看本导读给出的解释和检查题。只打开当前指定链接；第一次可以读代码与示例图，不必安装软件。运行练习是第二遍的任务，先确认所需变量、环境和数据，再选择相应代码段。</p>
+
+</section><section aria-labelledby="单元1神经元活动了我们到底看到了什么" class="reader-section"><a id="unit1"></a><h2 id="单元1神经元活动了我们到底看到了什么" tabindex="-1">单元1：神经元“活动了”，我们到底看到了什么？</h2>
+<h3 id="点开之前先理解" tabindex="-1">点开之前先理解</h3>
+<p>假设一束光照进眼睛，研究者从相关神经细胞记录到一串短促信号。这里至少有两个值得区分的量：<strong>膜电位</strong>是细胞内外的电压差，随时间连续变化；<strong>动作电位</strong>是一次短暂的电信号事件，也常被叫作spike。把每次事件发生的时刻记下来，就得到spike train。<strong>放电率</strong>则是选定时间窗内的放电次数除以时间窗长度。</p>
+<p>这一区分会影响以后怎么写代码。一个数组可能装的是每毫秒采样的电压，也可能装的是几次放电发生的时间；两种数组里的数含义不同，不能看到一条曲线就把它当成同一种数据。头皮EEG和fMRI的测量又是另外的层级，后面的分支会单独介绍。</p>
+<h3 id="这次只打开一章" tabindex="-1">这次只打开一章</h3>
+<p>进入<a href="https://nba.uth.tmc.edu/neuroscience/s1/chapter01.html" rel="noopener noreferrer">Neuroscience Online：Resting Potentials and Action Potentials</a>。这是医学背景的在线教材，整个网站还包括感觉、运动和高级脑功能；本次只借用其中最前面三个小节。</p>
+<ol>
+<li>找到 <strong>1.1 Introduction to the Action Potential</strong>。快速略过历史叙述，重点看Figure 1.1中光刺激和重复spike的联系；动画无法播放时读相邻文字即可。</li>
+<li>读 <strong>1.2 Features of Action Potentials</strong>，只回答：在这里的教学例子中，刺激增强主要改变的是单次spike大小，还是出现频率？</li>
+<li>读 <strong>1.3 Intracellular Recordings from Neurons</strong>，对照Figures 1.2、1.3识别静息电位、去极化和阈值。<strong>到1.4 Components of the Action Potentials开始时停止。</strong></li>
+</ol>
+<p>去极化就是膜电位变得较不负，例如从−70 mV变到−60 mV；它不一定已经触发动作电位。阈值是这个教学模型中启动放电的边界。第一遍先建立这些关系，下一章的离子通道和更细的动作电位过程留到解释模型机制时再读。</p>
+<h3 id="三个检查题答完就结束" tabindex="-1">三个检查题，答完就结束</h3>
+<ul>
+<li><code>[-70,-65,-60] mV</code>与<code>[12,37,58] ms</code>分别可能表示什么？前者可以是三个采样时刻的膜电位；后者可以是三次放电的时刻。仅有数字还不够，需要单位和数据定义。</li>
+<li>在0.1秒内记录到5次spike，这段时间的平均放电率是多少？<strong>50 Hz</strong>；Hz在这里表示每秒多少次。它不是膜电位大小，也不证明放电均匀发生。</li>
+<li>从−70 mV升到−60 mV是否一定放电？<strong>不能判断</strong>，还要知道阈值及所讨论的模型/细胞条件。</li>
+</ul>
+<p>能把连续测量值、事件时刻和时间窗内的计数分开，就可以进入单元2。刺激越强、频率越高是当前例子的直觉；后续看到适应、抑制或复杂刺激时，需要重新检查这种关系，不能把它当作所有神经元的通则。</p>
+
+</section><section aria-labelledby="单元2第一次只学会读懂一段神经信号代码" class="reader-section"><a id="unit2"></a><h2 id="单元2第一次只学会读懂一段神经信号代码" tabindex="-1">单元2：第一次只学会读懂一段神经信号代码</h2>
+<p>首次目标是把“时间、测量值、数组、图”联系起来，预计用时是本导读的估计，不是官方课时。神经数据通常是在许多时刻记录的电压或放电：一维数组装一条时间序列，二维数组可以装多个细胞的序列；绘图用来观察信号何时变化，也能发现时间单位或数据排列错误。</p>
+<p>直接打开 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html" rel="noopener noreferrer">W0D1：LIF Neuron Part I</a>，这次只使用同一页面中的选定片段。LIF 是描述输入电流怎样改变神经元膜电位的简化模型。先读 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-1-1-the-lif-model" rel="noopener noreferrer">Section 1.1</a> 的变量解释，认出 <code>t</code> 是时间、<code>I</code> 是输入电流、<code>V</code> 是膜电位即可；微分方程推导留到建模单元。</p>
+<p><strong>没有 Python 基础：约 120–150 分钟。</strong>先用 35–45 分钟读 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-1-2-comments-in-code" rel="noopener noreferrer">1.2 Comments in code</a>、<a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-1-3-math-operations" rel="noopener noreferrer">1.3 Math operations</a>、<a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-2-1-for-loops" rel="noopener noreferrer">2.1 For Loops</a>，只做 Exercise 1 的取消注释，以及 Exercise 2 的十个时间点。用 25–30 分钟进入 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-3-plotting" rel="noopener noreferrer">Section 3</a>，看绘图说明和 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#coding-exercise-5-plotting-current" rel="noopener noreferrer">Exercise 5</a> 的输入电流图；然后用 30–40 分钟读 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-6-using-numpy" rel="noopener noreferrer">Section 6</a> 开头的数组说明，并看 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#coding-exercise-13-using-2d-arrays" rel="noopener noreferrer">Exercise 13</a> 开头的二维数组说明及初始化代码。最后留 20–30 分钟做下面的自测。</p>
+<p><strong>已会变量、循环和简单绘图：约 45–75 分钟。</strong>先做自测；只回补没有通过的片段。读二维数组示例时，首轮只需说明 <code>(n, step_end)</code> 中每个维度的意义，不必完成后面的网络仿真。</p>
+<p>具体停在哪里：数组部分读到 Exercise 11 开始就停，再跳到 Exercise 13，看到主循环之前的初始化代码即可。这里只学习数据怎样存放；循环里的膜电位更新公式暂时可以作为给定计算。视频也按当前疑问选看，完成自测就不必补看同主题的长视频与短回顾。若一个概念反复卡住，把问题记为“哪一行、哪个变量、预期是什么”，用下面的回补链接定位。</p>
+<p>可以先在网页读代码、查看示例输出与 “Click for solution”，无需先安装。网页已提供 Colab 启动链接；实际运行请从官方页面按钮打开，并先执行 Setup 和所需变量定义。学生代码中的 <code>...</code> 是待填空，<code>NotImplementedError</code> 是练习提示；不要直接运行整本 notebook 期待全部成功。</p>
+<p>下面三个自测由本导读编写，可先口算和看图，再用代码核对：</p>
+<ol>
+<li><strong>读懂时间序列。</strong><code>dt=0.001</code>，<code>for step in range(25)</code>，<code>t=step*dt</code>：有几个时间点，最后一项是多少？应答 <strong>25 个，0.024 秒</strong>；<code>step</code> 是序号，<code>t</code> 才是带单位的时间。不会时回补 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-1-3-math-operations" rel="noopener noreferrer">1.3</a> 和 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-2-1-for-loops" rel="noopener noreferrer">2.1</a>。</li>
+<li><strong>读懂图。</strong>给 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#coding-exercise-5-plotting-current" rel="noopener noreferrer">Exercise 5</a> 的示例图写出横纵轴含义：应为 <strong>时间（s）与输入电流（A）</strong>，不是膜电位；横轴 0–0.024 秒对应离散取样点。能把公式的 <code>t</code>、<code>I(t)</code> 对到图上即通过。不会时回补 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-3-plotting" rel="noopener noreferrer">Section 3</a>。</li>
+<li><strong>读懂数组。</strong>把 <code>[[1,2,3],[3,6,9]]</code> 视为“2 个细胞 × 3 个时刻”的示意数据：shape 应是 <strong>(2,3)</strong>；每个时刻跨细胞平均得到 <strong>[2,4,6]</strong>，即 <code>mean(axis=0)</code>；每个细胞跨时间平均得到 <strong>[2,6]</strong>，即 <code>mean(axis=1)</code>。不会时回补 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#section-6-using-numpy" rel="noopener noreferrer">Section 6</a> 和 <a href="https://compneuro.neuromatch.io/tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html#coding-exercise-13-using-2d-arrays" rel="noopener noreferrer">Exercise 13</a> 开头，先画出行列再计算。</li>
+</ol>
+<p>本次提交三个自测答案和一张带轴名、单位的电流图（先读者可注释官方示例图）。到此结束首轮；随机输入、完整 LIF 仿真、W0D2 的类与函数，以及线代、微积分、概率整日课程留待后续任务按需选读。</p>
+
+</section><section aria-labelledby="单元3持续输入多大神经元才会开始放电" class="reader-section"><a id="unit3"></a><h2 id="单元3持续输入多大神经元才会开始放电" tabindex="-1">单元3：持续输入多大，神经元才会开始放电？</h2>
+<h3 id="先把问题想清楚再看方程" tabindex="-1">先把问题想清楚，再看方程</h3>
+<p>上一单元用数组记录随时间变化的量。现在要多做一步：根据输入，预测下一个时刻的膜电位。</p>
+<p>最简单的直觉是一个有漏水口的容器：输入不断加入，已有的积累也会逐渐流失。LIF的“积分”表示过去输入会积累影响膜电位，“漏”表示没有输入时膜电位会向静息值回落。“放电”则是一条额外规则：达到阈值，记录一次事件，再把电位重置。这个模型主要预测放电时刻，不生成真实动作电位的尖峰形状。</p>
+<p>Neuronal Dynamics是一整本从单细胞讲到网络和认知的教材；配套Exercises是另一套Python练习。本次只从书中取两个小节，再做Exercises中的一道题。先修只需要看懂电压、电流、乘除法，以及“一个量会随时间变化”；微分方程推导可以第二遍再读。</p>
+<h3 id="今天的阅读范围6090分钟" tabindex="-1">今天的阅读范围：60–90分钟</h3>
+<p>先打开<a href="https://neuronaldynamics.epfl.ch/online/Ch1.S3.html#SS1" rel="noopener noreferrer">1.3.1 Integration of Inputs</a>，看Figure 1.6和方程中电位、输入、电阻及时间常数的关系。随后跳到<a href="https://neuronaldynamics.epfl.ch/online/Ch1.S3.html#SS3" rel="noopener noreferrer">1.3.3 The Threshold for Spike Firing</a>，只理解阈值与重置规则。第一遍可以跳过脉冲输入的推导；<strong>1.3.4及后面的星号小节暂不读</strong>。</p>
+<p>书中常用u表示电位，以下用V表示同一个量。把静息值明确写出来，阈值以下的模型是：</p>
+<p>[
+\tau_m\frac{dV}{dt}=-(V-V_{rest})+RI(t).
+]</p>
+<p>右边第一项把电位拉回静息值；第二项表示输入电流的作用；时间常数(\tau_m)控制变化有多快。暂时不会解方程也能先做预测：对一个持续不变的电流，若不触发重置，电位最终趋向 <strong>静息电位＋电阻×电流</strong>。</p>
+<h3 id="在这里先预测带着答案进入练习" tabindex="-1">在这里先预测，带着答案进入练习</h3>
+<p>下面使用配套练习页公开的默认值：静息电位−70 mV、阈值−50 mV、电阻10 MΩ。假设从静息值出发、无噪声、输入持续足够长。</p>
+<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>输入电流</th>
+<th>不考虑放电重置时趋向的电位</th>
+<th>预测</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 nA</td>
+<td>−60 mV</td>
+<td>达不到阈值，不放电</td>
+</tr>
+<tr>
+<td>2 nA</td>
+<td>−50 mV</td>
+<td>刚好是临界值；连续时间的理想模型只逐渐趋近阈值，有限时间内不跨过</td>
+</tr>
+<tr>
+<td>3 nA</td>
+<td>−40 mV</td>
+<td>会先到达阈值并放电、重置；所以实际轨迹不会一直升到−40 mV</td>
+</tr>
+</tbody>
+</table></div>
+<p>这里用到的单位关系是 <strong>1 MΩ × 1 nA = 1 mV</strong>。临界电流因此是20 mV ÷ 10 MΩ = <strong>2 nA</strong>。这组数属于当前练习的模型，不是所有真实神经元的通用参数。</p>
+<p>现在只进入<a href="https://neuronaldynamics-exercises.readthedocs.io/en/latest/exercises/leaky-integrate-and-fire.html#exercise-minimal-current" rel="noopener noreferrer">Exercise 1.1：minimal current</a>，读1.1.1的计算问题和1.1.2的模拟说明。<strong>到1.2 Exercise: f-I Curve开始时停止。</strong> 临界电流恰好等于2 nA时“不放电”也是原练习明确要求解释的结果；计算机的有限精度、阈值比较和观察窗口会影响边界表现，不能只靠屏幕上一点点差异推翻解析预测。</p>
+<p>第一遍提交上面三个条件的预测，并用自己的话解释为什么持续输入不意味着无限积累。第二遍在配套环境可用时，再分别代入1、2、3 nA运行1.1.2的代码，比较膜电位和spike计数；此前要执行页面开头的导入，并定义占位变量<code>I_min</code>。运行时间有限，较弱的超阈值输入也可能尚未等到第一次放电，观察窗口要一并记录。</p>
+<h3 id="过关标准与下一步" tabindex="-1">过关标准与下一步</h3>
+<p>能解释“漏、积累、阈值、重置”四件事，并正确预测上述三种输入，就完成这一单元。还不需要复现整章图，也不需要安装多个仿真框架。</p>
+<p>如果卡在“−60比−70大”及去极化，回单元1的1.3；如果卡在电阻和电流如何合成电位变化，只回看书的Figure 1.6与1.3.1。代码环境卡住时，把纸笔预测保留下来，先不要跳到更大的网络练习。</p>
+<p>下一次才做<a href="https://neuronaldynamics-exercises.readthedocs.io/en/latest/exercises/leaky-integrate-and-fire.html#exercise-f-i-curve" rel="noopener noreferrer">Exercise 1.2：f-I Curve</a>：横轴为输入电流I，纵轴为放电率f。先画预期形状，再模拟。原题设3 ms不应期，即每次放电后至少等待3 ms；因此无限大输入下的速率上限趋向约333 Hz，而有限输入还要花时间积累到阈值。这个问题是在原有模型上只增加一层理解。</p>
+
+</section><section aria-labelledby="建模分支把刚才的四条规则写进brian2" class="reader-section"><a id="model-branch"></a><h2 id="建模分支把刚才的四条规则写进brian2" tabindex="-1">建模分支：把刚才的四条规则写进Brian2</h2>
+<p>只有想继续实现模型时才进入这一段。Brian2是一套让你用方程、单位和事件规则描述神经元的仿真工具。这里先学习如何把LIF的概念对应到代码，暂不建立网络。</p>
+<p>进入<a href="https://brian2.readthedocs.io/en/stable/resources/tutorials/1-intro-to-brian-neurons.html" rel="noopener noreferrer">Brian2 Part 1: Neurons</a>。依次读 <strong>Units system → A simple model → Adding spikes → Refractoriness</strong>；在 <strong>Multiple neurons</strong> 前停止，约45–60分钟的初读。找出四种角色：<code>NeuronGroup</code>保存模型与状态，<code>StateMonitor</code>记录状态随时间的变化，<code>threshold/reset</code>决定放电与重置，<code>SpikeMonitor</code>记录放电时刻。</p>
+<p>这个例子中的<code>v</code>使用归一化、无量纲的写法，不能直接把数值0.8当成0.8 mV，也不要把它的数值与单元3的默认参数混在一起。第一次只在纸上标出“哪里定义方程、哪里触发事件、哪里保存结果”，再预测去掉不应期会改变什么。能分清记录电位和记录事件的对象，就可以停下。第二遍在已有Brian2环境中运行这四段；网络连接和随机神经元留到有明确问题时再学。</p>
+
+</section><section aria-labelledby="eegmeg分支一段连续脑电怎样变成刺激后的平均反应" class="reader-section"><a id="data-branch"></a><h2 id="eegmeg分支一段连续脑电怎样变成刺激后的平均反应" tabindex="-1">EEG/MEG分支：一段连续脑电怎样变成“刺激后的平均反应”？</h2>
+<p>先想象一个实验：给被试重复播放声音，同时连续记录 EEG/MEG。我们想知道声音出现后，测量信号有没有较稳定的变化。困难在于，连续记录还混着眨眼、背景活动和别的刺激，所以不能把任意一段波形都叫作“听觉反应”。</p>
+<p>MNE 的三个词对应三个整理步骤。<strong>Raw</strong> 是各传感器从头到尾的连续记录；<strong>Epochs</strong> 是按事件时刻切出并对齐的一组短片段，例如每次声音前 0.2 秒到之后 0.5 秒；<strong>Evoked</strong> 是同一条件下这些片段的平均。平均有助于显现与事件稳定对齐的变化，但不能自动清除伪迹。网页使用的是已滤波和降采样的示例文件；Raw是连续数据对象的名称，不保证它完全未经处理。</p>
+<p>第一遍给自己约 45–60 分钟，只按下面的路线读：从 <a href="https://mne.tools/stable/auto_tutorials/intro/10_overview.html#loading-data" rel="noopener noreferrer">Loading data</a> 认识 Raw；接着跳到 <a href="https://mne.tools/stable/auto_tutorials/intro/10_overview.html#detecting-experimental-events" rel="noopener noreferrer">Detecting experimental events</a>，读到 <a href="https://mne.tools/stable/auto_tutorials/intro/10_overview.html#epoching-continuous-data" rel="noopener noreferrer">Epoching continuous data</a> 末尾；再跳到 <a href="https://mne.tools/stable/auto_tutorials/intro/10_overview.html#estimating-evoked-responses" rel="noopener noreferrer">Estimating evoked responses</a>，读至 <code>aud_evoked.plot_joint(picks="eeg")</code> 对应图就停。</p>
+<p>第一遍跳过 <strong>Preprocessing</strong> 整节、<strong>Time-frequency analysis</strong> 整节，以及 <strong>Inverse modeling</strong> 至页末。概要中的 ICA 直接指定删除第 1、2 个成分，却省略了判断过程，不能把这些编号照搬到其他数据。这里也暂不学习源定位和 3D 脑图。</p>
+<p>完成三个小动作：</p>
+<ol>
+<li>在事件表中找到 1、2 的含义，解释为什么 <code>epochs["auditory"]</code> 能同时选中左右耳声音。无需理解所有 Python 语法。</li>
+<li>看 <code>aud_epochs.plot_image</code> 的 EEG 021 图：指出每一行、横轴零点、颜色各代表什么，再找图下的平均曲线。写一句“平均之前保留了什么，平均之后丢掉了什么”。</li>
+<li>第二遍才进入运行：在已经配置并具备 Sample 数据的环境中，只选运行读取、事件、分段、平均相关代码；跳过 ICA 的结果须标为“未经过该 ICA 步骤的教学演示”，不要求波形及保留试次数与网页相同。<code>sample.data_path()</code> 在缺数据时会自动下载数据集，因此它不属于第一遍练习，也不要直接选择整页运行。</li>
+</ol>
+<p>检查答案应包含：图的每一行是一次试次，零点是该次刺激开始；条件内平均消除了单次试次这一维，但掩盖了试次差异。<code>plot_compare_evokeds</code> 默认可能汇总多个传感器，不是某一个 EEG 电极的波形；读 EEG 单通道先看上一项图像练习。能解释这些就可结束，不以“图像看起来更干净”为掌握标准。</p>
+<p>若卡在数组维度，只回看 <strong>Epoching continuous data</strong> 末尾的 Note：Raw 是“通道×时间”，Epochs 是“试次×通道×时间”。若卡在对齐，回看 <strong>Detecting experimental events</strong> 的三列表格说明，不必重学整份 MNE 文档。</p>
+
+</section><section aria-labelledby="fmri分支能否从-fmri-判断被试看的是人脸还是房屋" class="reader-section"><a id="fmri-branch"></a><h2 id="fmri分支能否从-fmri-判断被试看的是人脸还是房屋" tabindex="-1">fMRI分支：能否从 fMRI 判断被试看的是人脸还是房屋？</h2>
+<p>这个练习问的是：给模型一幅没参加训练的脑活动图，它能否判断当时看到的是人脸还是房屋？先只做这个二分类问题，不要求掌握整套 fMRI 分析。这里的信号是与血氧变化有关的 <strong>BOLD</strong> 测量，并不是直接记录神经元放电。</p>
+<p>把一幅脑图想成许多立体小格子，<strong>voxel（体素）</strong>就是这些格子。模型把每幅图中选定体素的数值排成一行作为输入，把 face/house 作为答案。<strong>run</strong> 是一次连续扫描段；同一 run 中的图像共享漂移和时间相关性，不能想当然地把每幅图视为完全独立样本。交叉验证就是轮流拿出部分数据作考题；这里每轮留出一个完整 run，其余 run 用来学习。</p>
+<p>第一遍约 45–60 分钟：从 <a href="https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html#retrieve-the-files-of-the-haxby-dataset" rel="noopener noreferrer">Retrieve the files of the Haxby dataset</a> 读到 <a href="https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html#anova-pipeline-with-decoder-object" rel="noopener noreferrer">ANOVA pipeline with Decoder object</a>，认识输入与标签；随后直接跳到 <a href="https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html#obtain-prediction-scores-via-cross-validation" rel="noopener noreferrer">Obtain prediction scores via cross validation</a>，读到 <code>decoder.cv_scores_["face"]</code> 及输出为止。ANOVA 在这里先筛出对分类有帮助的体素，线性 SVM 再组合它们作判断；第一遍不推导公式。</p>
+<p>跳过 <strong>Fit the decoder and predict</strong> 的运行，它把模型再用于刚才拟合的数据，不能把这种预测当成新数据成绩。<strong>Visualize the results</strong> 整节暂不做：权重脑图看起来直观，但系数并不能直接说明哪些脑区造成了识别人脸。</p>
+<p>完成三个小动作：</p>
+<ol>
+<li>只读 <strong>Load the behavioral data</strong>：指出 <code>labels</code> 是类别，<code>chunks</code> 是 run；解释为什么筛选 face/house 时，图像、类别和 run 标记必须一起筛选。</li>
+<li>画三个框代表三个 run，用箭头表示轮流“两个训练、一个验证”。在每个训练框内写“选体素→拟合模型”，避免先用全部数据挑体素再分训练与验证。</li>
+<li>第二遍具备课程环境后，再运行数据与标签准备，以及交叉验证一节；沿用上文定义的 mask 和筛选参数，略过前一次 Decoder 拟合及全部可视化。记录每折成绩，并核对每个训练集与验证集的 run 没有交集。默认数据入口为第 2 位被试，不增加全体被试任务；本轮学习不触发下载。</li>
+</ol>
+<p>检查答案是：每折分数回答“同一被试的另一个扫描 run 能否分对”，不能回答“换一个人也能否分对”。网页当前列出 12 个分数，可先指出最高、最低值；它们是官网输出，不是本教程实测或必须达到的目标。平衡二分类的随机猜测约为 50%，但正式评价还要报告类别比例和合理基线。</p>
+<p>如果不知道数据和标签如何一一对应，只补读 <strong>Load the behavioral data</strong>；如果不知道为什么留出 run，只重读 <strong>Obtain prediction scores via cross validation</strong> 的开头及 <code>groups=run_label</code>，暂不展开整套机器学习课程。</p>
+
+</section><section aria-labelledby="论文也只读一小段选择一个分支" class="reader-section"><a id="paper-branch"></a><h2 id="论文也只读一小段选择一个分支" tabindex="-1">论文也只读一小段：选择一个分支</h2>
+<p>这三篇按研究兴趣选用，不是第一周的共同必读。每次只选一篇，先完成这里的小任务，再决定是否继续读全文。时间是初读估计，不含查词。</p>
+<h3 id="neuroai-分支richards-et-al2019" tabindex="-1">NeuroAI 分支：Richards et al.（2019）</h3>
+<p><strong>文章：</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7115933/" rel="noopener noreferrer">A deep learning framework for neuroscience</a>；<strong>何时读：</strong> 已知道人工神经网络由相互连接的计算单元组成，想理解它为什么能用于研究大脑时。首读约 40–50 分钟。</p>
+<p><strong>先理解问题。</strong> 一个网络会识别图像，还不足以说明它解释了大脑。本文提出一种研究框架：追问什么条件使网络学出了某种行为与神经活动。“目标函数”是给学习结果打分的数学规则，例如答错越多，分数越差；它不等于“识别图片”这个任务名称。“学习规则”规定如何调整单元之间的连接强度；“架构”规定有哪些单元、怎样连接，以及信息怎样流动。三者一起约束网络能学出什么。</p>
+<p><strong>按这个顺序读。</strong> 先读摘要和 Figure 1 图注，给三个组件各写一句自己的解释。再到 “The three core components of a deep learning framework for the brain”，只读开头定义三者的第一段。随后直接看 Figure 4 及图注：动物学习分辨条纹方向时，模型预测不同层级的神经活动会怎样改变？注意这是示范怎样提出可检验预测，不能把图中的预测写成已经证实的脑机制。最后浏览 “Caveats and concerns”，找出作者承认的一项局限。</p>
+<p><strong>第一遍到此停止。</strong> 暂不读 Figure 2、3、5 的学习算法细节，也不追引文。此轮目标是理解框架，尚不要求掌握反向传播。</p>
+<p><strong>读后任务。</strong> 用纸笔设计一个“分辨条纹方向”的假想模型，写下输入、输出、三个组件，再写一个可用动物学习前后记录检验的预测。不需要代码。<strong>检查点：</strong> 能区分任务名称和评分规则；预测涉及可观察的神经活动变化；能解释“行为答对”为什么不能单独确定大脑使用了哪种学习规则。</p>
+<h3 id="数据分析分支kriegeskorte-et-al2009" tabindex="-1">数据分析分支：Kriegeskorte et al.（2009）</h3>
+<p><strong>文章：</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2841687/" rel="noopener noreferrer">Circular analysis in systems neuroscience – the dangers of double dipping</a>；<strong>何时读：</strong> 准备比较实验条件或训练第一个解码模型之前。首读约 35–45 分钟。</p>
+<p><strong>先理解问题。</strong> 假如先挑选两组差异最大的测量位置，再用同一批数据报告这些位置的组间差异，随机波动也会帮助你“发现”差异。这叫“循环分析”：本来用于检验结论的数据，提前参与了决定怎样检验。“体素”是脑成像中的一个小体积测量单元；“感兴趣区（ROI）”是被选出来集中分析的一组位置。选择它们的依据，可能悄悄影响后面的结果。</p>
+<p><strong>按这个顺序读。</strong> 先读摘要和 Figure 1b 图注，认识选择、加权、排序都可能引入问题。然后看 Figure 2b 的上下两排及图注，再读 “Example 1: Pattern-information analysis” 中从 “We first analyzed all experimental runs together to define an ROI” 开始的实例。带着一个问题：作者已经把奇数、偶数实验轮次分成训练集和测试集，为什么仍出错？答案要追到分组之前：选体素时已经用了测试数据。最后读 “A policy for noncircular analysis” 正文及 Figure 4 图注。</p>
+<p><strong>第一遍到此停止。</strong> 暂不进入 Figure 3 的区域激活模拟和补充材料统计推导。先掌握数据流向，后续做相关分析再回读细节。</p>
+<p><strong>读后任务。</strong> 画出“全部数据→选位置→分组→训练→测试”的流程，并改成测试数据不参与选择或训练的流程。<strong>检查点：</strong> 修正版先保留测试集，只用训练数据决定选哪些位置，再把同一规则用于测试集；若反复调选择规则，应在训练部分内部验证；测试标签始终不能反馈给前面步骤。还要能说明：仅仅写了“交叉验证”，不代表整个分析流程就没有泄漏。</p>
+<h3 id="神经群体与动力学分支cunningham--yu2014" tabindex="-1">神经群体与动力学分支：Cunningham &amp; Yu（2014）</h3>
+<p><strong>文章：</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4433019/" rel="noopener noreferrer">Dimensionality reduction for large-scale neural recordings</a>；<strong>何时读：</strong> 已知道放电率表示单位时间内的放电次数，开始面对多个神经元共同活动的数据时。首读约 40–50 分钟。</p>
+<p><strong>先理解问题。</strong> 同时记录很多神经元，会得到很多条活动曲线；它们可能共享少数变化模式。本文讨论怎样把这些共同变化提取出来。“维度”在这里首先指描述一次群体状态需要多少个数：记录三个神经元，就先用三个放电率描述。“潜变量”是从记录中推断出的少数变化量，并非额外测到了几个神经元。“主成分分析（PCA）”寻找数据变化幅度最大的方向，用少数方向近似保留原数据的变化。</p>
+<p><strong>按这个顺序读。</strong> 先看 Figure 1 及图注，理解很多神经元、条件和重复实验为什么难以逐条看清。然后读 “Intuition behind dimensionality reduction” 并对照 Figure 2：图中一个点是某一时刻三个神经元的共同活动，连续时刻连成轨迹；时间不是坐标轴。最后只读 “Basic covariance methods” 的第一段和 Figure 4a 图注，弄清把点投影到一条轴上意味着什么。不要因为一条轴变化最大，就给它贴上“记忆”或“决策”的标签。</p>
+<p><strong>第一遍到此停止。</strong> 暂不查 Table 1 的全部方法，也不要求推导矩阵公式或理解 Figure 4b、4c。读完应能解释降维解决什么问题，以及它会丢掉什么。</p>
+<p><strong>读后任务。</strong> 纸笔检查四个群体状态：(1,0,1)、(0,1,1)、(1,1,2)、(2,1,3)。找出第三个数与前两个数的关系，说明为何两个数足以描述这些点。<strong>检查点：</strong> 第三个数等于前两个数之和，因此这些点位于二维平面；这只是教学构造的关系，不能据此证明真实大脑只有两个状态变量，也不能保证 PCA 保留的是与行为最相关的变化。</p>
+</section><section aria-labelledby="暂时没有放到首轮的资源什么时候再打开" class="reader-section"><h2 id="暂时没有放到首轮的资源什么时候再打开" tabindex="-1">暂时没有放到首轮的资源，什么时候再打开？</h2>
+<div aria-label="可横向滚动的表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>资源</th>
+<th>进入它之前应已能做什么</th>
+<th>届时只带一个问题进去</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllenSDK</td>
+<td>理解spike时刻、刺激对齐、trial及平均；能读二维数组</td>
+<td>选定一个session、一个刺激条件后，怎样得到raster与PSTH？先确定session和下载范围，再使用索引中的Quick Start。</td>
+</tr>
+<tr>
+<td>DANDI/NWB</td>
+<td>已有一个明确的数据分析问题，知道需要哪些信号与时间段</td>
+<td>怎样读取该数据集的有限片段，并记录Dandiset版本和单位？</td>
+</tr>
+<tr>
+<td>MIT 9.40、NEPR208</td>
+<td>已通过一个入门单元，知道自己当前缺哪类解释</td>
+<td>若更喜欢大学讲课与题集，可替换主课形式；先在课表中找神经编码或单神经元模型等当前主题。</td>
+</tr>
+<tr>
+<td>其余方向文献</td>
+<td>已完成一篇分支导读的检查题</td>
+<td>从索引选择下一篇解决当前问题的论文，先指定一张关键图和一项读后任务。</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些入口保留在<a href="./tutorial-resources.html">资源与文献索引</a>。进入具体数据项目时，再补环境、数据体积和运行检查；不要把数据门户的整个目录当作第一份作业。</p>
+</section><section aria-labelledby="给tutorial编写者一条推荐写到什么程度才够" class="reader-section"><h2 id="给tutorial编写者一条推荐写到什么程度才够" tabindex="-1">给tutorial编写者：一条推荐写到什么程度才够？</h2>
+<p>可以用读者点开链接前后的行为判断。点开前，他应已知道当前问题、术语含义，以及为什么这个资源适合回答它；点开后，应能找到具体小节，知道何时停止，最后用一道预测题、一个解释或一个小结果检查理解。</p>
+<p>每次更新，先完成一个学习单元：问题引入→必要概念的中文解释→小节/图号导航→第一次任务→参考检查点→卡住时的回补位置。课程简介、难度和时长放在旁边帮助选择，不承担全部教学解释。论文也采用同样方式，不能仅在题名后写“学习PCA”或“理解NeuroAI”。</p>
+<p>本版于2026-09-08对照官方课程小节与三篇论文的实际图注/相关正文编写。教学例子与解释为本稿组织；时间为估计。首轮任务可通过阅读和纸笔完成；本次没有运行外部notebook或下载课程数据集。书目与资源许可核查记录、全文定位证据在<code>evidence/</code>；完整引文在<code>references.bib</code>。</p>
+</section>
+        <div class="article-end" lang="zh-CN"><span>读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main">回到顶部 ↑</a></div>
+      </article>
+    </div>
+  </div>
+</main>
+<footer class="site-footer"><a href="./">开玄 · 玄路</a><span>在代码、思想与未知之间。</span><a href="./tutorial-guide.md" download="计算神经科学_开放资源与分层阅读清单.md">原稿下载 ↓</a></footer>
+</body>
+</html>
