@@ -1,70 +1,74 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+
+<html data-language="zh" lang="zh-Hans">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090d13">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#090d13" name="theme-color"/>
 <title>计算神经科学资源地图 · 开玄 · 玄路</title>
-<meta name="description" content="从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。">
-<link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./assets/site-fonts.css">
-<link rel="stylesheet" href="./tutorial-v2.css">
-<script src="./tutorial-v2.js" defer></script>
+<meta content="从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。" name="description"/>
+<link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="./assets/site-fonts-v6.css" rel="stylesheet"/>
+<link href="./tutorial-v6.css" rel="stylesheet"/>
+<script defer="" src="./tutorial-v6.js"></script>
 </head>
-<body data-page-title-zh="计算神经科学资源地图" data-page-title-en="Computational Neuroscience Resource Map">
-<a class="skip-link" href="#reader"><span data-zh="跳到正文" data-en="Skip to article">跳到正文</span></a>
+<body data-page-title-en="Computational Neuroscience Resource Map" data-page-title-tw="計算神經科學資源地圖" data-page-title-zh="计算神经科学资源地图" data-reader-original-lang="en">
+<a class="skip-link" href="#reader"><span data-en="Skip to article" data-tw="跳到正文" data-zh="跳到正文">跳到正文</span></a>
 <header class="site-header">
-  <div class="header-inner"><div class="header-brand"><button id="language-toggle" class="language-toggle" type="button" aria-label="切换到英文" title="切换到英文" data-language="zh"><span lang="zh-CN" data-language-label="zh">中</span><span aria-hidden="true">/</span><span lang="en" data-language-label="en">EN</span></button><a class="wordmark" href="./" aria-label="开玄 · 玄路，返回首页" data-aria-zh="开玄 · 玄路，返回首页" data-aria-en="KaiXuan · XuanRoad, home"><span class="brand-mark" aria-hidden="true">玄</span><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a></div><div class="header-actions"><span class="reading-label" id="reading-label">已读 0%</span><a href="./"><span data-zh="返回首页" data-en="Home">返回首页</span> <span aria-hidden="true">↗</span></a></div></div>
-  <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
+<div class="header-inner"><div class="header-brand"><div class="language-picker">
+<button aria-controls="language-options" aria-expanded="false" aria-label="选择语言" class="language-toggle" id="language-toggle" title="选择语言" type="button"><span class="language-toggle-zh" lang="zh-Hans">中</span><span aria-hidden="true" class="language-toggle-divider">|</span><span class="language-toggle-en" lang="en">EN</span></button>
+<div aria-label="选择语言" class="language-options" hidden="" id="language-options" role="group"><button aria-pressed="true" data-language-choice="zh" lang="zh-Hans" type="button">简体中文</button><button aria-pressed="false" data-language-choice="zh-Hant" lang="zh-Hant" type="button">繁體中文</button><button aria-pressed="false" data-language-choice="en" lang="en" type="button">English</button></div>
+</div><a aria-label="开玄 · 玄路，返回首页" class="wordmark" data-aria-en="KaiXuan · XuanRoad, home" data-aria-tw="開玄 · 玄路，返回首頁" data-aria-zh="开玄 · 玄路，返回首页" href="./"><span aria-hidden="true" class="brand-mark">玄</span><span data-en="KaiXuan · XuanRoad" data-tw="開玄 · 玄路" data-zh="开玄 · 玄路">开玄 · 玄路</span></a></div><div class="header-actions"><span class="reading-label" id="reading-label"><span data-tw="已讀 0%" data-zh="已读 0%">已读 0%</span></span><a href="./"><span data-en="Home" data-tw="返回首頁" data-zh="返回首页">返回首页</span> <span aria-hidden="true">↗</span></a></div></div>
+<div aria-hidden="true" class="reading-track"><div id="reading-progress"></div></div>
 </header>
 <main id="main">
-  <div class="hero">
-    <p class="eyebrow"><span aria-hidden="true"></span><span data-zh="开玄的学习笔记 · 完整资源地图" data-en="KaiXuan’s notes · The complete resource map">开玄的学习笔记 · 完整资源地图</span></p>
-    <p data-zh="计算神经科学资源地图" data-en="Computational Neuroscience Resource Map" class="display-title">计算神经科学资源地图</p>
-    <p data-zh="从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。" data-en="Explore courses, theoretical models, neural data, and NeuroAI. Use your next question to choose your next resource." class="hero-lead">从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。</p>
-    <div class="hero-actions"><a class="primary-link" href="#tutorial-how-to-use-this-resource-list-to-learn-without-getting-lost"><span data-zh="先看六步学习路线" data-en="Start with the six-step learning route">先看六步学习路线</span> <span aria-hidden="true">↗</span></a></div>
-    <div class="hero-meta"><span data-zh="收录版本 · 2026.09" data-en="Edition · September 2026">收录版本 · 2026.09</span><span data-zh="3 个起步单元" data-en="3 starter units">3 个起步单元</span><span data-zh="18 类资源" data-en="18 resource categories">18 类资源</span><span data-zh="16 篇文献" data-en="16 selected papers">16 篇文献</span></div>
-    <div class="original-language-note" data-show-lang="zh" lang="zh-CN"><p>正文保留作者的英文原稿。需要中文起步说明，可以先读逐步导读。</p><a href="./tutorial.html?lang=zh">阅读中文逐步导读 <span aria-hidden="true">↗</span></a></div>
-  </div>
-  <div class="reader-shell">
-    <nav class="view-tabs" aria-label="教程视图" data-aria-zh="教程视图" data-aria-en="Tutorial views"><a href="./tutorial.html"><span data-zh="逐步导读" data-en="Guided tutorial">逐步导读</span></a><a href="./tutorial-map.html" aria-current="page"><span data-zh="18 类资源地图" data-en="18-category resource map">18 类资源地图</span></a><a href="./tutorial-resources.html"><span data-zh="文献索引" data-en="Reading index">文献索引</span></a></nav>
-    <section class="search-panel" aria-label="搜索本页内容" data-aria-zh="搜索本页内容" data-aria-en="Search this page">
-      <form id="search-form" role="search">
-        <label for="section-search"><span data-zh="查找本页" data-en="Search this page">查找本页</span></label>
-        <div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="section-search" type="search" placeholder="如 LIF、Python、交叉验证" data-placeholder-zh="如 LIF、Python、交叉验证" data-placeholder-en="Try LIF, Python, or fMRI" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="reset" id="clear-search" hidden><span data-zh="清除" data-en="Clear">清除</span></button><button type="submit" class="search-submit"><span data-zh="搜索" data-en="Search">搜索</span></button></div>
-      </form>
-      <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
-      <ol id="search-results" class="search-results" hidden></ol>
-      <noscript><p class="noscript-note">页面搜索需要 JavaScript。也可以使用浏览器的“在页面中查找”，或通过目录阅读。</p></noscript>
-    </section>
-    <div class="reading-layout">
-      <aside class="toc-sidebar">
-        <details class="toc-panel" id="toc-panel" open>
-          <summary><span data-zh="本页目录" data-en="On this page">本页目录</span> <span aria-hidden="true">⌄</span></summary>
-          <nav class="toc-nav" aria-label="本页目录" data-aria-zh="本页目录" data-aria-en="On this page"><p data-zh="本页目录" data-en="On this page" class="toc-heading">本页目录</p><ol><li class="toc-level-2"><a href="#1-big-picture-motivation-and-field-maps" data-toc><span data-zh="01 · 全景、动机与领域地图" data-en="1) Big-picture, motivation, and field maps">01 · 全景、动机与领域地图</span></a></li>
-<li class="toc-level-2"><a href="#2-intro-computational-neuroscience-courses" data-toc><span data-zh="02 · 计算神经科学入门课程" data-en="2) Intro computational neuroscience courses">02 · 计算神经科学入门课程</span></a></li>
-<li class="toc-level-2"><a href="#3-math--python-foundations-for-neuroscience" data-toc><span data-zh="03 · 数学与 Python 基础" data-en="3) Math + Python foundations for neuroscience">03 · 数学与 Python 基础</span></a></li>
-<li class="toc-level-2"><a href="#4-neural-data-science-signal-processing-and-analysis-workflows" data-toc><span data-zh="04 · 神经数据分析" data-en="4) Neural data science, signal processing, and analysis workflows">04 · 神经数据分析</span></a></li>
-<li class="toc-level-2"><a href="#5-core-theorymodeling-reference" data-toc><span data-zh="05 · 核心理论与建模" data-en="5) Core theory/modeling reference">05 · 核心理论与建模</span></a></li>
-<li class="toc-level-2"><a href="#6-statisticsml-for-neural--behavioral-data-advanced" data-toc><span data-zh="06 · 统计与机器学习" data-en="6) Statistics/ML for neural &amp; behavioral data (advanced)">06 · 统计与机器学习</span></a></li>
-<li class="toc-level-2"><a href="#7-deep-learning-tool--implementation-resources" data-toc><span data-zh="07 · 深度学习工具" data-en="7) Deep learning tool + implementation resources">07 · 深度学习工具</span></a></li>
-<li class="toc-level-2"><a href="#8-neuroai-bridging-models-representations-and-brains" data-toc><span data-zh="08 · NeuroAI" data-en="8) NeuroAI: bridging models, representations, and brains">08 · NeuroAI</span></a></li>
-<li class="toc-level-2"><a href="#9-bci--neural-decoding-competitions--reproducible-codebases" data-toc><span data-zh="09 · BCI 与神经解码" data-en="9) BCI + neural decoding (competitions + reproducible codebases)">09 · BCI 与神经解码</span></a></li>
-<li class="toc-level-2"><a href="#10-neuroimaging-brain-anatomy" data-toc><span data-zh="10 · 神经影像与脑解剖" data-en="10) Neuroimaging, brain anatomy">10 · 神经影像与脑解剖</span></a></li>
-<li class="toc-level-2"><a href="#11-open-sciencedata-portalstracking-funding--initiatives" data-toc><span data-zh="11 · 开放数据与科学规范" data-en="11) Open science/data portals/tracking funding &amp; initiatives">11 · 开放数据与科学规范</span></a></li>
-<li class="toc-level-2"><a href="#12-competitions-hackathons" data-toc><span data-zh="12 · 竞赛与黑客松" data-en="12) Competitions, hackathons">12 · 竞赛与黑客松</span></a></li>
-<li class="toc-level-2"><a href="#13-paper-update" data-toc><span data-zh="13 · 论文更新" data-en="13) Paper update">13 · 论文更新</span></a></li>
-<li class="toc-level-2"><a href="#14-community-meetings-and-conferences" data-toc><span data-zh="14 · 社群与学术会议" data-en="14) Community, meetings, and conferences">14 · 社群与学术会议</span></a></li>
-<li class="toc-level-2"><a href="#15-blogs--explainers-for-intuition--research-craft" data-toc><span data-zh="15 · 博客与讲解" data-en="15) Blogs + explainers (for intuition &amp; research craft)">15 · 博客与讲解</span></a></li>
-<li class="toc-level-2"><a href="#16-meta-lists" data-toc><span data-zh="16 · 资源合集" data-en="16) Meta-lists">16 · 资源合集</span></a></li>
-<li class="toc-level-2"><a href="#17-personal-interests" data-toc><span data-zh="17 · 个人兴趣" data-en="17) Personal Interests">17 · 个人兴趣</span></a></li>
-<li class="toc-level-2"><a href="#18-mathematical-biologyphilosophy-of-modeling-for-scientific-taste" data-toc><span data-zh="18 · 建模哲学与数学思考" data-en="18) Mathematical biology/philosophy of modeling (for scientific taste)">18 · 建模哲学与数学思考</span></a></li>
-<li class="toc-level-2"><a href="#tutorial-how-to-use-this-resource-list-to-learn-without-getting-lost" data-toc><span data-zh="六步学习路线" data-en="Tutorial: how to use this resource list to learn without getting lost">六步学习路线</span></a></li></ol></nav>
-        </details>
-        <div class="source-links"><a href="./tutorial-map.md" download="Introduction_to_Computational_Neuroscience_Guided_Resources.md"><span data-zh="下载本页 Markdown" data-en="Download original Markdown">下载本页 Markdown</span> <span aria-hidden="true">↓</span></a><a href="./references.bib" download><span data-zh="下载 BibTeX 引用" data-en="Download BibTeX citations">下载 BibTeX 引用</span> <span aria-hidden="true">↓</span></a></div>
-      </aside>
-      <article class="reader" id="reader" tabindex="-1" lang="en">
-        <section aria-labelledby="intro-to-computational-neuroscience" class="reader-section"><h1 id="intro-to-computational-neuroscience" tabindex="-1">Intro to computational neuroscience</h1>
+<div class="hero">
+<p class="eyebrow"><span aria-hidden="true"></span><span data-en="KaiXuan’s notes · The complete resource map" data-tw="開玄的學習筆記 · 完整資源地圖" data-zh="开玄的学习笔记 · 完整资源地图">开玄的学习笔记 · 完整资源地图</span></p>
+<p class="display-title" data-en="Computational Neuroscience Resource Map" data-tw="計算神經科學資源地圖" data-zh="计算神经科学资源地图">计算神经科学资源地图</p>
+<p class="hero-lead" data-en="Explore courses, theoretical models, neural data, and NeuroAI. Use your next question to choose your next resource." data-tw="從基礎課程到理論建模、神經數據與 NeuroAI，按問題尋找下一份資源。下方保留英文原稿。" data-zh="从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。">从基础课程到理论建模、神经数据与 NeuroAI，按问题寻找下一份资源。下方保留英文原稿。</p>
+<div class="hero-actions"><a class="primary-link" href="#tutorial-how-to-use-this-resource-list-to-learn-without-getting-lost"><span data-en="Start with the six-step learning route" data-tw="先看六步學習路線" data-zh="先看六步学习路线">先看六步学习路线</span> <span aria-hidden="true">↗</span></a></div>
+<div class="hero-meta"><span data-en="Edition · September 2026" data-tw="收錄版本 · 2026.09" data-zh="收录版本 · 2026.09">收录版本 · 2026.09</span><span data-en="3 starter units" data-tw="3 個起步單元" data-zh="3 个起步单元">3 个起步单元</span><span data-en="18 resource categories" data-tw="18 類資源" data-zh="18 类资源">18 类资源</span><span data-en="16 selected papers" data-tw="16 篇文獻" data-zh="16 篇文献">16 篇文献</span></div>
+<div class="original-language-note" data-show-lang="zh zh-Hant" lang="zh-Hans"><p><span data-tw="正文保留作者的英文原稿。需要中文起步說明，可以先讀逐步導讀。" data-zh="正文保留作者的英文原稿。需要中文起步说明，可以先读逐步导读。">正文保留作者的英文原稿。需要中文起步说明，可以先读逐步导读。</span></p><a href="./tutorial.html?lang=zh"><span data-tw="閱讀中文逐步導讀 " data-zh="阅读中文逐步导读 ">阅读中文逐步导读 </span><span aria-hidden="true">↗</span></a></div>
+</div>
+<div class="reader-shell">
+<nav aria-label="教程视图" class="view-tabs" data-aria-en="Tutorial views" data-aria-tw="教程視圖" data-aria-zh="教程视图"><a href="./tutorial.html"><span data-en="Guided tutorial" data-tw="逐步導讀" data-zh="逐步导读">逐步导读</span></a><a aria-current="page" href="./tutorial-map.html"><span data-en="18-category resource map" data-tw="18 類資源地圖" data-zh="18 类资源地图">18 类资源地图</span></a><a href="./tutorial-resources.html"><span data-en="Reading index" data-tw="文獻索引" data-zh="文献索引">文献索引</span></a></nav>
+<section aria-label="搜索本页内容" class="search-panel" data-aria-en="Search this page" data-aria-tw="搜索本頁內容" data-aria-zh="搜索本页内容">
+<form id="search-form" role="search">
+<label for="section-search"><span data-en="Search this page" data-tw="查找本頁" data-zh="查找本页">查找本页</span></label>
+<div class="search-input-wrap"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg><input aria-controls="search-results" aria-describedby="search-status" autocomplete="off" data-placeholder-en="Try LIF, Python, or fMRI" data-placeholder-tw="如 LIF、Python、交叉驗證" data-placeholder-zh="如 LIF、Python、交叉验证" id="section-search" placeholder="如 LIF、Python、交叉验证" type="search"/><button hidden="" id="clear-search" type="reset"><span data-en="Clear" data-tw="清除" data-zh="清除">清除</span></button><button class="search-submit" type="submit"><span data-en="Search" data-tw="搜索" data-zh="搜索">搜索</span></button></div>
+</form>
+<p aria-live="polite" class="search-status" id="search-status" role="status"></p>
+<ol class="search-results" hidden="" id="search-results"></ol>
+<noscript><p class="noscript-note">页面搜索需要 JavaScript。也可以使用浏览器的“在页面中查找”，或通过目录阅读。</p></noscript>
+</section>
+<div class="reading-layout">
+<aside class="toc-sidebar">
+<details class="toc-panel" id="toc-panel" open="">
+<summary><span data-en="On this page" data-tw="本頁目錄" data-zh="本页目录">本页目录</span> <span aria-hidden="true">⌄</span></summary>
+<nav aria-label="本页目录" class="toc-nav" data-aria-en="On this page" data-aria-tw="本頁目錄" data-aria-zh="本页目录"><p class="toc-heading" data-en="On this page" data-tw="本頁目錄" data-zh="本页目录">本页目录</p><ol><li class="toc-level-2"><a data-toc="" href="#1-big-picture-motivation-and-field-maps"><span data-en="1) Big-picture, motivation, and field maps" data-tw="01 · 全景、動機與領域地圖" data-zh="01 · 全景、动机与领域地图">01 · 全景、动机与领域地图</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#2-intro-computational-neuroscience-courses"><span data-en="2) Intro computational neuroscience courses" data-tw="02 · 計算神經科學入門課程" data-zh="02 · 计算神经科学入门课程">02 · 计算神经科学入门课程</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#3-math--python-foundations-for-neuroscience"><span data-en="3) Math + Python foundations for neuroscience" data-tw="03 · 數學與 Python 基礎" data-zh="03 · 数学与 Python 基础">03 · 数学与 Python 基础</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#4-neural-data-science-signal-processing-and-analysis-workflows"><span data-en="4) Neural data science, signal processing, and analysis workflows" data-tw="04 · 神經數據分析" data-zh="04 · 神经数据分析">04 · 神经数据分析</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#5-core-theorymodeling-reference"><span data-en="5) Core theory/modeling reference" data-tw="05 · 核心理論與建模" data-zh="05 · 核心理论与建模">05 · 核心理论与建模</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#6-statisticsml-for-neural--behavioral-data-advanced"><span data-en="6) Statistics/ML for neural &amp; behavioral data (advanced)" data-tw="06 · 統計與機器學習" data-zh="06 · 统计与机器学习">06 · 统计与机器学习</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#7-deep-learning-tool--implementation-resources"><span data-en="7) Deep learning tool + implementation resources" data-tw="07 · 深度學習工具" data-zh="07 · 深度学习工具">07 · 深度学习工具</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#8-neuroai-bridging-models-representations-and-brains"><span data-en="8) NeuroAI: bridging models, representations, and brains" data-tw="08 · NeuroAI" data-zh="08 · NeuroAI">08 · NeuroAI</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#9-bci--neural-decoding-competitions--reproducible-codebases"><span data-en="9) BCI + neural decoding (competitions + reproducible codebases)" data-tw="09 · BCI 與神經解碼" data-zh="09 · BCI 与神经解码">09 · BCI 与神经解码</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#10-neuroimaging-brain-anatomy"><span data-en="10) Neuroimaging, brain anatomy" data-tw="10 · 神經影像與腦解剖" data-zh="10 · 神经影像与脑解剖">10 · 神经影像与脑解剖</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#11-open-sciencedata-portalstracking-funding--initiatives"><span data-en="11) Open science/data portals/tracking funding &amp; initiatives" data-tw="11 · 開放數據與科學規範" data-zh="11 · 开放数据与科学规范">11 · 开放数据与科学规范</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#12-competitions-hackathons"><span data-en="12) Competitions, hackathons" data-tw="12 · 競賽與黑客松" data-zh="12 · 竞赛与黑客松">12 · 竞赛与黑客松</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#13-paper-update"><span data-en="13) Paper update" data-tw="13 · 論文更新" data-zh="13 · 论文更新">13 · 论文更新</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#14-community-meetings-and-conferences"><span data-en="14) Community, meetings, and conferences" data-tw="14 · 社羣與學術會議" data-zh="14 · 社群与学术会议">14 · 社群与学术会议</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#15-blogs--explainers-for-intuition--research-craft"><span data-en="15) Blogs + explainers (for intuition &amp; research craft)" data-tw="15 · 博客與講解" data-zh="15 · 博客与讲解">15 · 博客与讲解</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#16-meta-lists"><span data-en="16) Meta-lists" data-tw="16 · 資源合集" data-zh="16 · 资源合集">16 · 资源合集</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#17-personal-interests"><span data-en="17) Personal Interests" data-tw="17 · 個人興趣" data-zh="17 · 个人兴趣">17 · 个人兴趣</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#18-mathematical-biologyphilosophy-of-modeling-for-scientific-taste"><span data-en="18) Mathematical biology/philosophy of modeling (for scientific taste)" data-tw="18 · 建模哲學與數學思考" data-zh="18 · 建模哲学与数学思考">18 · 建模哲学与数学思考</span></a></li>
+<li class="toc-level-2"><a data-toc="" href="#tutorial-how-to-use-this-resource-list-to-learn-without-getting-lost"><span data-en="Tutorial: how to use this resource list to learn without getting lost" data-tw="六步學習路線" data-zh="六步学习路线">六步学习路线</span></a></li></ol></nav>
+</details>
+<div class="source-links"><a download="Introduction_to_Computational_Neuroscience_Guided_Resources.md" href="./tutorial-map.md"><span data-en="Download original Markdown" data-tw="下載本頁 Markdown" data-zh="下载本页 Markdown">下载本页 Markdown</span> <span aria-hidden="true">↓</span></a><a download="" href="./references.bib"><span data-en="Download BibTeX citations" data-tw="下載 BibTeX 引用" data-zh="下载 BibTeX 引用">下载 BibTeX 引用</span> <span aria-hidden="true">↓</span></a></div>
+</aside>
+<article class="reader" id="reader" lang="en" tabindex="-1">
+<section aria-labelledby="intro-to-computational-neuroscience" class="reader-section"><h1 id="intro-to-computational-neuroscience" tabindex="-1">Intro to computational neuroscience</h1>
 <p>Three levels of inquiry suggested by David Marr:</p>
 <p><strong>Computational:</strong> What problem does the brain solve, and why?</p>
 <p><strong>Algorithmic:</strong> What representations and procedures could solve it?</p>
@@ -349,11 +353,12 @@
 <p>The <a href="./tutorial.html">Chinese guided tutorial</a> provides longer concept explanations, bounded readings, small exercises, and worked checks for selected starting points. The <a href="./tutorial-resources.html">resource and literature index</a> records the supplementary sources and reading details. Use these alongside the relevant entries here; the complete original 18-category resource catalog is included in this main guide.</p>
 <p><em>Edition note: full original-resource merge completed on 11 September 2026. Selected supplementary pages and literature were checked on 8 September 2026; the merge does not represent a new availability check of every legacy link. The external notebooks were not executed as part of this edit.</em></p>
 </section>
-        <div class="article-end" lang="zh-CN" data-interface-language><span data-zh="读到这里，可以回到当前问题，完成一个小任务。" data-en="Return to your current question and complete one small task.">读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
-      </article>
-    </div>
-  </div>
+<div class="article-end" data-interface-language="" lang="zh-Hans"><span data-en="Return to your current question and complete one small task." data-tw="讀到這裏，可以回到當前問題，完成一個小任務。" data-zh="读到这里，可以回到当前问题，完成一个小任务。">读到这里，可以回到当前问题，完成一个小任务。</span><a href="#main"><span data-en="Back to top" data-tw="回到頂部" data-zh="回到顶部">回到顶部</span> ↑</a></div>
+</article>
+</div>
+</div>
 </main>
-<footer class="site-footer"><a href="./"><span data-zh="开玄 · 玄路" data-en="KaiXuan · XuanRoad">开玄 · 玄路</span></a><span data-zh="在代码、思想与未知之间。" data-en="Between code, thought, and the unknown.">在代码、思想与未知之间。</span><a href="./tutorial-map.md" download="Introduction_to_Computational_Neuroscience_Guided_Resources.md"><span data-zh="原稿下载" data-en="Download original">原稿下载</span> ↓</a><a class="font-credit" href="./assets/ALIMAMA-DAOLI-LICENSE.txt"><span data-zh="中文字体：阿里妈妈刀隶体" data-en="Chinese font: Alimama DaoLiTi">中文字体：阿里妈妈刀隶体</span></a></footer>
+<footer class="site-footer"><a href="./"><span data-en="KaiXuan · XuanRoad" data-tw="開玄 · 玄路" data-zh="开玄 · 玄路">开玄 · 玄路</span></a><span data-en="Between code, thought, and the unknown." data-tw="在代碼、思想與未知之間。" data-zh="在代码、思想与未知之间。">在代码、思想与未知之间。</span><a download="Introduction_to_Computational_Neuroscience_Guided_Resources.md" href="./tutorial-map.md"><span data-en="Download original" data-tw="原稿下載" data-zh="原稿下载">原稿下载</span> ↓</a><a class="font-credit" href="./assets/FONT-SOURCES-v6.md"><span data-en="Type &amp; licenses · Alegreya / Lishu" data-tw="字體與許可 · Alegreya / 隸書" data-zh="字体与许可 · Alegreya / 隶书">字体与许可 · Alegreya / 隶书</span></a></footer>
 </body>
 </html>
+
