@@ -1,0 +1,28 @@
+Aoyagi Reisho SIMO2 / 青柳隷書しも
+Copyright: SIMO. Calligraphy by Aoyagi Kouzan (青柳衡山).
+
+This file records the available public license notice and its provenance. It is not a new license or an additional grant of rights.
+
+Official distributor: Musashi System
+https://opentype.jp/aoyagireisho.htm
+The official page states that SIMO owns the copyright, that the font is free to use, and directs users to the font's usage instructions.
+
+Original Japanese usage/redistribution notice, reproduced by the free-font distributor Maoken:
+https://www.maoken.com/freefonts/2508.html#comment-7369
+
+青柳隷書しもフォントは無料フォントです。使用にあたっての条件は何も
+ありません。商用使用もＯＫです。（できましたら連絡はください）
+青柳隷書しもフォントは無料でどこにでも配布することができます。た
+だし、再配布にあたって有料とすることはできません。
+
+English explanation of the notice:
+The font is free. There are no conditions on use; commercial use is also permitted. The author requests contact if possible. The font may be distributed anywhere free of charge; charging for redistribution is not permitted.
+
+The website distributes the TTF free of charge, unchanged. It does not claim permission to convert, subset, modify or sell the font. A CSS family alias and a unicode-range filter select only the original nonempty Chinese glyphs without modifying the font file.
+
+The binary was obtained from the font archive linked on Maoken's distribution page. The official ZIP download failed with transport errors during integration. The font and this license reproduction are supplied with that provenance, not described as an official direct download or an open-source font.
+
+Archive source:
+https://oss.maoken.com/%E7%8C%AB%E5%95%83%E5%AD%97%E4%BD%93/%E6%97%A5%E6%9C%AC%E6%B1%89%E5%AD%97/%E9%9D%92%E6%9F%B3%E9%9A%B6%E4%B9%A6_%E7%8C%AB%E5%95%83%E7%BD%91.zip
+
+Obtained: 2026-09-12
