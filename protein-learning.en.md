@@ -1,16 +1,16 @@
-# A Protein Design Learning Path for Students with a Biology Background
+# A Protein Design Learning Path for Readers with a Biology Background
 
 Written by Kaixuan.
 
 In recent years, deep learning has been rapidly changing fields such as protein structure prediction, protein design, antibody design, and drug discovery and development.
 
-But when biology students actually begin learning, they often encounter two problems:
+When biology students begin studying this area, however, they often encounter two problems:
 
 First, they do not know how to deploy and use existing protein design models.
 
-Second, even after taking some machine-learning courses, they still find it difficult to understand why these models can be applied to protein problems, let alone how to go on to read papers, reproduce models, or even design their own.
+Second, even after taking some machine-learning courses, they still find it difficult to understand why these models can be applied to problems involving proteins, let alone how to go on to read papers, reproduce models, or even design their own.
 
-I therefore recommend dividing the process of learning AI protein design into two main tracks:
+I therefore recommend approaching AI for protein design along two main learning tracks:
 
 The first is using tools: learning to deploy and use existing deep-learning models to complete specific protein design tasks.
 
@@ -20,15 +20,15 @@ The second is systematically studying the foundations of machine learning and de
 
 ## 1. First Learn to Use Existing Protein Design Models
 
-Start by understanding what problems current protein design models can each solve, and how to combine them into a complete design workflow.
+Start by understanding which problems each current protein design model can solve and how to combine the models into a complete design workflow.
 
-The best and most comprehensive course is [Rosetta Commons ML Protein Design Bootcamp 2025](https://rosettamlbootcamp2025.github.io/).
+In my view, the best and most comprehensive option is [Rosetta Commons ML Protein Design Bootcamp 2025](https://rosettamlbootcamp2025.github.io/).
 
 This course starts with model deployment and explains in detail the models used at different stages of protein design, including how to choose appropriate tools for a specific problem.
 
-At the end of the course, learners are also asked to use these models together to complete a relatively full protein design project.
+At the end of the course, learners are also asked to combine these models in a reasonably complete protein design project.
 
-If time allows, I recommend working through the entire course. Afterwards, you will not only know the current mainstream protein design models, but also have a fairly systematic understanding of the overall computational protein design workflow.
+If time allows, I recommend working through the entire course. Afterwards, you will be familiar with the major protein design models in current use and have a fairly systematic understanding of the overall computational protein design workflow.
 
 <a id="foundations"></a>
 
@@ -38,29 +38,29 @@ The second part is mainly a basic introduction to machine learning and deep lear
 
 The goal at this stage is to help you truly understand models and prepare to build, train, and improve them yourself later.
 
-Many courses now teach machine learning and deep learning together, moving between them. Strictly speaking, deep learning is part of machine learning. Many important concepts in model training, such as the effect of dataset size on model performance, overfitting, underfitting, and generalization, also come from the basic framework of machine learning.
+Many courses now interweave their coverage of machine learning and deep learning. Strictly speaking, deep learning is part of machine learning. Many important concepts in model training, such as the effect of dataset size on model performance, overfitting, underfitting, and generalization, also come from the basic framework of machine learning.
 
 First, you can take a look at Prof. Richard Xu's new interactive tutorial.
 
 Course website: [Richard Xu's Interactive Machine Learning Tutorial](https://ai.richardxu.com/ml/#/m/).
 
-The reason is that its learning curve is gentle and it is easy to get started. His Part 0 Getting Started offers a convenient way to understand the overall framework of machine learning (ML) and deep learning (DL).
+It has a gentle learning curve and is easy to get started with. Part 0 Getting Started provides an accessible overview of machine learning (ML) and deep learning (DL).
 
-The second is ML for Biologists.
+The second resource is ML for Biologists.
 
 Course website: [Machine Learning for Biologists](https://carpentries-incubator.github.io/ml4bio-workshop/).
 
-Most current machine-learning and deep-learning courses lack descriptions of specific biological contexts for their use. As a result, even after taking these courses, biology students find it difficult to develop an intuition for using these tools to solve concrete biological problems. Machine Learning for Biologists is a relatively short workshop that can help us understand some basic applications of machine learning to biological problems and gradually develop an intuition for when machine learning can be used.
+Most machine-learning and deep-learning courses provide little context about how the methods apply to biology. As a result, even after taking these courses, biology students find it difficult to develop a practical sense of how to use these tools to solve specific biological problems. Machine Learning for Biologists is a relatively short workshop that can help us understand some basic applications of machine learning to biological problems and gradually develop an intuition for when machine learning is useful.
 
 <a id="deep-learning"></a>
 
-## 3. Quickly Understand the Overall Framework of Deep Learning
+## 3. Get a Quick Overview of Deep Learning
 
 After establishing a basic understanding, you can use MIT 6.S191 to quickly learn about the main models and applications of deep learning.
 
 Course website: [MIT 6.S191](https://introtodeeplearning.com/?trk=public_post-text).
 
-Compared with MIT's earlier AI courses, its coding labs now use the mainstream PyTorch framework, and it provides both videos and corresponding slides. You can start by working through Lectures 1 and 2, Lab 1, Lectures 3 and 4, and Lecture 8.
+Compared with MIT's earlier AI courses, its coding labs now use the widely used PyTorch framework, and it provides both videos and corresponding slides. You can start by working through Lectures 1 and 2, Lab 1, Lectures 3 and 4, and Lecture 8.
 
 You do not necessarily need to master every formula and every piece of code on your first pass. Initially, focus on understanding what problems the different models solve and how the models relate to one another.
 
@@ -87,11 +87,11 @@ Course website: [Machine Learning for Computational Biology](https://lnkd.in/eem
 
 MIT Canvas course page: [Course modules](https://canvas.mit.edu/courses/33939/modules).
 
-The Canvas page contains the corresponding slides, transcripts, and schedule, which makes it convenient to consult.
+The Canvas page brings together the corresponding slides, transcripts, and course schedule, making them easy to find.
 
 Some course notes are mainly compiled from recordings, so their content can be somewhat disorganized. I therefore recommend using the course slides and videos as the main materials, with transcripts as a supplement.
 
-Once you have watched and understood all of these, you should basically be able to read papers yourself with AI's help and learn about model design and implementation. I will also gradually write up this material and the process of doing it in future posts.
+After working through and understanding these resources, you should be ready to read papers independently with AI's help and learn how to design and build models. I will cover these topics and the practical steps involved in future write-ups.
 
 <a id="further-study"></a>
 
@@ -107,7 +107,7 @@ Course website: [Machine Learning Specialization](https://www.deeplearning.ai/sp
 
 Andrew Ng's machine-learning course explains things in considerable detail and moves at a relatively gentle pace, making it suitable for a systematic introduction.
 
-The first part of the course mainly introduces traditional machine learning, while the second and third parts gradually move into neural networks and deep learning.
+The first part of the course mainly introduces classical machine learning, while the second and third parts gradually move into neural networks and deep learning.
 
 If you are not yet familiar with concepts such as supervised learning, loss functions, optimization methods, model evaluation, overfitting, and regularization, you can start with this course series. You only need to watch the first part; the version on Coursera is sufficient.
 
@@ -115,11 +115,11 @@ If you are not yet familiar with concepts such as supervised learning, loss func
 
 Course website: [Stanford CS231n](https://cs231n.stanford.edu/).
 
-Although CS231n focuses on computer vision, it is a very solidly designed course.
+Although CS231n focuses on computer vision, it is a very solid course.
 
 It introduces models such as convolutional neural networks, but more importantly, it systematically discusses model training, optimization, initialization, regularization, and hyperparameter tuning.
 
-This makes the course particularly suitable for developing model training skills. Even if you do not work in computer vision later, much of the training experience can be transferred to protein models.
+This makes the course particularly suitable for developing model training skills. Even if you do not work in computer vision later, many of the lessons about training models also apply to machine-learning models for proteins.
 
 ### 3. Systematic Training in Deep Learning: CMU 11-785
 
@@ -145,13 +145,13 @@ If you encounter concepts you do not understand while taking other courses, you 
 
 After mastering the basics, you can also try reading explanations of the AlphaFold and AlphaFold 3 models and their code implementations.
 
-The following resources are fairly suitable for getting started.
+The following resources are good starting points.
 
 ### 1. AlphaFold Decoded
 
 Project repository: [AlphaFold Decoded](https://github.com/kilianmandon/alphafold-decoded).
 
-This project is useful for taking apart and understanding AlphaFold's model architecture.
+This project is useful for breaking down and understanding AlphaFold's model architecture.
 
 ### 2. The Illustrated AlphaFold
 
@@ -165,26 +165,26 @@ Project repository: [AlphaFold 3 PyTorch Implementation](https://github.com/luci
 
 This project provides a PyTorch implementation of AlphaFold 3.
 
-When reading third-party implementations like these, focus on which modules make up the model, how tensors pass between modules, and how the mathematical descriptions in the paper become concrete code.
+When reading third-party implementations like these, focus on which modules make up the model, how tensors pass between modules, and how the mathematical descriptions in the paper are translated into code.
 
 <a id="projects"></a>
 
 ## 7. The Learning Method I Recommend Most: Learn Through Projects
 
-The method I recommend most, now that we have Codex and GPT, is to ask them to develop a learning approach for you, recommend papers or relevant projects and competitions in protein design, and help you reproduce models from papers or examine their details to see whether they can be optimized. Use datasets for training and learn while implementing projects. Even at the earliest stages of learning, for example when taking MIT 6.S191, you can ask AI how a model is used in protein design, why it can be applied there, and which of its characteristics make that possible.
+The approach I recommend most, now that we have Codex and GPT, is to ask them to help plan your learning, recommend relevant papers, projects, or competitions in protein design, and help you reproduce the models described in papers or examine their details for possible improvements. Use datasets to train models and learn as you implement projects. Even at the earliest stages of learning, for example when taking MIT 6.S191, you can ask AI how a model is used in protein design, why it can be applied there, and which of its characteristics make that possible.
 
 For example, you can ask AI to help with the following:
 
-- Develop a staged learning path based on your background;
+- Plan your learning in stages based on your background;
 - Recommend important papers in protein design;
 - Find projects, competitions, and public datasets suitable for beginners;
 - Explain model architectures and mathematical formulas in papers;
-- Read and organize your understanding of open-source project code;
+- Read through and explain open-source project code;
 - Reproduce models from papers;
 - Analyze why training fails or performance is poor;
 - Try to optimize models, and use public datasets for training and validation.
 
-You do not need to wait until you have learned all the foundations before starting this way of learning.
+You can start learning this way before you have covered all the fundamentals.
 
 Even when first studying MIT 6.S191, as soon as you encounter a model, you can ask AI directly:
 
@@ -193,17 +193,17 @@ Even when first studying MIT 6.S191, as soon as you encounter a model, you can a
 - Which of its architectural features play a key role?
 - If it were adapted to protein sequence or structure generation, which parts would need to change?
 
-Learning around concrete questions is usually more effective than simply watching courses in order. Many concepts only become truly understandable through reading code, processing data, training models, and analyzing results.
+Learning through specific questions is usually more effective than simply watching courses in order. Many concepts only really make sense through reading code, processing data, training models, and analyzing results.
 
 <a id="summary"></a>
 
 ## Summary
 
-An overview of how to explore and appreciate ML for protein design, and get started:
+A short route to getting a feel for ML in protein design and putting it into practice:
 
 1. Rosetta Commons ML Protein Design Bootcamp 2025.
 2. Part 0 of Prof. Richard Xu's interactive tutorial.
 3. Machine Learning for Biologists.
 4. Selected lectures from MIT 6.S191.
 5. Lectures 8–11 of MIT Machine Learning for Computational Biology.
-6. Learn with a concrete purpose through relevant competitions and projects. Choose a paper with an open-source code project related to a competition or a small research topic, and try to reproduce it or make a minimal algorithmic improvement. You can first ask AI to suggest improvements, then repeatedly question it about the details and reasons.
+6. Let relevant competitions and projects give your learning a concrete goal. Choose a paper with an open-source code project related to a competition or a small research topic, and try reproducing the work or making a small algorithmic improvement. You can first ask AI to suggest possible improvements, then keep questioning it about the details and the reasoning behind its suggestions.
