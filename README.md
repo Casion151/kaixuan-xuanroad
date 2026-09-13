@@ -1,57 +1,9 @@
-# 开玄 · 玄路
+# Licences
 
-个人网站静态发布版本，保留原始页面、六个主题和开门动画。
+Copyright (c) 2026 Kaixuan.
 
-主题顺序为：01 关于、02 阅读、03 行旅、04 设计、05 思考、06 代码。首页与阅读页左上角固定显示「简中|繁中|英」，展开后可选择简体中文、繁體中文或 English。栏目、介绍与文章标题随语言切换，并保存本机的语言选择。网址支持 `?lang=zh`、`?lang=zh-Hant` 和 `?lang=en`。
+Original website code: **All rights reserved**. No general software license is granted. See [LICENSE](LICENSE) for the scope and the rights that remain available under applicable law and GitHub's Terms of Service.
 
-所有英文字体统一采用 Alegreya，包括标题、导航、编号、技术标注与教程正文，常规和斜体字体均随站点托管。简体中文使用阿里妈妈刀隶体；繁体中文整版采用中華民國教育部发布的「教育部隸書」，让繁体字形保持统一。两款中文字体均随站点托管，保留原始字体文件，详见 [字体来源与许可](assets/FONT-SOURCES-v7.md)。
+Original articles and tutorials: **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**. Noncommercial sharing of unadapted material is permitted with attribution under the [full official legal terms](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en). See [LICENSE](LICENSE) for the covered material and exclusions.
 
-首页以荧光蓝为整体色调，六扇水墨门框分别采用青蓝、紫、金橙、薄荷绿、粉和钴蓝色，保留浓淡、飞白与晕染边缘。不规则星空包含多种彩色星点，道路两侧的荧光蓝水光沿曲线缓缓流向前景。鼠标移入门框、手指触碰门框或键盘聚焦时，对应颜色的墨晕沿整个门框轮廓向外扩散；移开后逐渐消散，点击仍然进入栏目。每扇门下方仅显示当前语言的主题名称，门上保留编号；文章条目不显示阅读分钟数。系统启用减少动态效果时，星空与水流保持静态，门框使用静态墨晕反馈；页面进入后台时暂停动态星空与水流。
-
-## GitHub Pages
-
-目标仓库：`Casion151/kaixuan-xuanroad`
-
-目标网址：https://casion151.github.io/kaixuan-xuanroad/
-
-在仓库 **Settings → Pages** 中选择 **Deploy from a branch**，分支为 `main`，目录为 `/ (root)`。
-
-样式、字体、图标和 JavaScript 资源均使用可兼容仓库子路径的地址。Vite 动态模块预加载地址从当前脚本位置解析，确保在 `/kaixuan-xuanroad/` 下正常加载。
-
-仓库根目录包含 `index.html`、`favicon.svg`、`assets/` 和 `.nojekyll`。请保留 `.nojekyll`，确保下划线开头的字体目录正常发布。
-
-这是已导出的静态版本，无需 Node.js 构建或数据库。原始可编辑项目保存在用户持有的 `KaiXuan-XuanRoad-Export.zip` 的 `source-code/` 目录中。更新网站时，请将新的静态导出文件替换到本仓库，并保留 `.nojekyll`。
-
-## 计算神经科学教程
-
-首页顶部的「教程」和「代码」栏目中的「计算神经科学入门：从资源到实践」均先进入资源地图。从教程以外打开导读或索引链接时，也先显示资源地图；在教程内部可自由选择阅读视图。
-
-- [18 类资源地图](tutorial-map.html)：完整英文资源主稿及六步学习路线。
-- [逐步导读](tutorial.html)：入门单元与建模、神经数据分析、NeuroAI 阅读分支，提供完整中文与英文正文。
-- [资源与文献索引](tutorial-resources.html)：课程、实践资源与 16 篇文献。
-
-阅读页提供章节目录、本页搜索、阅读位置提示、打印样式、Markdown 与 BibTeX 下载。教程按作者修订，删除面向编写者的制作说明，保留课程、练习、引用和原有核查日期。教程的网页资源全部随站点托管。
-
-教程界面、目录与搜索提示支持简体、繁体及英文。导读与阅读索引切换英文时显示完整英文正文，并在正文开头注明 AI 辅助撰写；资源地图始终保留英文正文，注明由 Kaixuan 独立整理撰写。繁体版使用规范繁体字形；中英文 Markdown 下载与所选正文同步，BibTeX 引文保持原样。
-
-教程来源为作者提供的 `tutorial_supplement_20260908.zip`。发布包含读者文稿和引用；制作脚本、抓取证据与缓存不作为阅读内容发布。
-
-## 蛋白质设计：个人随想与学习路线
-
-作者提供的蛋白质设计原文按内容拆为两篇，并从三扇门进入：
-
-- **思考 05**：[从生物学出发：走向蛋白质设计的随想](protein-reflections.html)，保留作者的个人经历与研究思考。
-- **阅读 02**：[面向生物背景的蛋白质设计学习路线](protein-learning.html)，保留两条学习主线、七节正式教程及总结路线。
-- **代码 06**：[蛋白质设计：工具应用与项目实践](protein-learning.html#tools)，直接进入同一篇教程的工具应用章节；文内可继续跳转至 AlphaFold 与项目学习。
-
-两篇文章提供简体、繁体和完整英文正文，以及目录、页内搜索和对应语言的 Markdown 下载。正文署名 Kaixuan。返回栏目链接支持 `?door=thought`、`?door=reading`、`?door=code`，并保留所选语言。蛋白质设计文章与计算神经科学教程使用各自的入口和导航。
-
-没有正文的示例文章标题与入口已移除。保留六扇门与栏目介绍；暂未发布文章的栏目只显示「暂无文章」。目前共有四个有效入口，指向计算神经科学教程、蛋白质设计学习路线及个人随想。
-
-## 邮箱订阅与 RSS
-
-首页右上角的「订阅」进入 [邮箱订阅页](subscribe.html)。访客在 Blogtrottr 的订阅页面自行填写邮箱、选择即时或摘要接收方式，并按服务提示完成订阅；不要求站主注册或付费。免费邮件可能包含服务商广告，邮件中提供退订链接。本站不接收或公开订阅者邮箱。
-
-发布三份 RSS 2.0 订阅源：[简体中文](feed.xml)、[繁體中文](feed.zh-Hant.xml)、[English](feed.en.xml)。订阅页随界面语言选择相应的源。Blogtrottr 定期检查 RSS 中的新条目，再投递邮件；不是网页每次修改都会触发通知。
-
-新增文章或需要通知的实质更新，应同时维护可编辑工作区 `work/site-tooling/feed-entries.json`，添加独立且稳定的条目 ID、实际发布日期、页面路径和中英文摘要，再运行 `work/build_subscription.py` 并发布三份 feed 文件。仅修正文案或样式时保留原有条目 ID，避免重复通知。不要在 RSS 中加入尚未公开的文章。
+Third-party software, fonts, and external resources retain their respective rights and licenses. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the license files linked there.

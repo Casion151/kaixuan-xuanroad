@@ -1,0 +1,67 @@
+Copyright (c) 2026 Kaixuan
+
+This repository contains materials with different licensing terms. The terms
+below apply only to copyright and other rights held by Kaixuan. They do not
+replace third-party licenses or claim ownership of third-party material.
+
+1. Original website code — All rights reserved
+
+All rights are reserved in the original website code authored by Kaixuan,
+including original JavaScript, CSS, page templates, and original portions of
+generated or bundled code. No general permission to copy, modify, redistribute,
+sublicense, or commercially use that original code is granted by this notice.
+Uses beyond applicable law, GitHub's Terms of Service, or a separate permission
+from Kaixuan require prior written permission.
+
+This reservation excludes the article and tutorial text described in section 2
+and all third-party components described in section 3. Combining original and
+third-party code in the same generated file does not change either license.
+
+2. Original articles and tutorials — CC BY-NC-ND 4.0
+
+The original articles and tutorials authored by Kaixuan are licensed under
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+(CC BY-NC-ND 4.0), to the extent that Kaixuan holds copyright in that material.
+
+This covers the original article and tutorial prose in the website's reading
+pages and corresponding Markdown manuscripts, including the computational
+neuroscience resource map, guided tutorial and reading index, and the protein
+design personal reflections and learning route. It also covers the authorized
+language versions of that original prose. Website templates, presentation code,
+and third-party quotations, figures, code, fonts, or other materials are excluded.
+
+Under the full license terms, you may copy and share the licensed material for
+noncommercial purposes with appropriate attribution, a link to the license, and
+the required notices. The license does not permit sharing adapted material.
+Please credit Kaixuan and retain a link to the source article when supplied.
+Commercial uses and the sharing of adaptations require separate permission
+unless permitted by applicable law.
+
+License deed:
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Full official legal text (the governing license terms):
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en
+
+The summary above does not replace, narrow, or add restrictions to the official
+CC BY-NC-ND 4.0 legal text. Copyright exceptions and limitations remain available.
+
+3. Third-party components and external resources
+
+Third-party software, fonts, and other materials retain their respective
+copyrights and licenses. See THIRD-PARTY-NOTICES.md and the license files linked
+there, including the unchanged font notices in assets/. Their licenses continue
+to apply even when they permit uses that the original-code notice does not.
+
+Links and bibliographic references to external courses, papers, repositories,
+datasets, models, and websites provide access information only. They do not
+relicense those external resources or grant rights on behalf of their owners.
+
+4. Public repository and existing rights
+
+Nothing in this notice withdraws rights granted under GitHub's Terms of Service
+for a public repository, including viewing and forking through GitHub's service,
+or rights granted by applicable law, the Creative Commons license, or a
+third-party license. A public repository is not by itself a general software
+license. Any other original material not expressly licensed above remains
+reserved to Kaixuan to the extent of Kaixuan's rights.
