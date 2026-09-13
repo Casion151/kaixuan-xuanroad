@@ -1,0 +1,19 @@
+@import url('./tutorial-v9.css');
+
+.protein-page .hero-lead { max-width: 760px; }
+.protein-page .display-title { max-width: 980px; text-wrap: balance; }
+.companion-links { display:flex; flex-wrap:wrap; align-items:center; gap:12px 22px; padding:20px 0 2px; font-size:13px; line-height:1.7; }
+.companion-links a { color:#9ab5c8; text-decoration-color:#38516a; }
+.companion-links a:first-child { color:#a9eaf1; }
+.protein-page .reader .article-end { display:block; }
+.protein-page .article-end .companion-links { padding:0 0 22px; }
+.translation-credit { font-size:13px; color:#8fa9ba; }
+.protein-reflections .reader { line-height:2.05; }
+.protein-reflections .hero:before { background:radial-gradient(ellipse at 72% 0%,#50305138,transparent 65%); }
+.protein-page .reader h1 { text-wrap:balance; }
+@media(max-width:600px) {
+  .protein-page .header-actions { gap:8px; }
+  .protein-page .header-actions a { font-size:12px; }
+  .protein-page .companion-links { gap:9px 16px; font-size:12px; }
+  .protein-page .companion-links a:first-child { flex-basis:100%; }
+}
