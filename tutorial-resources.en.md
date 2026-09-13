@@ -16,7 +16,7 @@ Choose only one main course. First fill the prerequisite gaps relevant to your b
 
 | Main course | When to choose it | Starting point and scope |
 |---|---|---|
-| Neuromatch Computational Neuroscience | The default path for independent study; suitable if you want exposure to both modeling and data analysis | [Online tutorials](https://compneuro.neuromatch.io/tutorials/intro.html); first complete the prerequisites in Python, linear algebra, calculus, and probability and statistics, then move into modeling, model fitting, and units relevant to your chosen direction. Public self-study materials are separate from applications to the formal teaching-assistant-supported program. |
+| Neuromatch Computational Neuroscience | The default path for independent study; suitable if you want exposure to both modeling and data analysis | [Online tutorials](https://compneuro.neuromatch.io/tutorials/intro.html); first complete the prerequisites in Python, linear algebra, calculus, and probability and statistics, then move into modeling, model fitting, and units relevant to your chosen track. Access to public self-study materials is separate from applying to the formal program with teaching assistant support. |
 | MIT 9.40 Introduction to Neural Computation | If you prefer a complete university course with lecture videos and problem sets | [Official OCW](https://ocw.mit.edu/courses/9-40-introduction-to-neural-computation-spring-2018/); includes lecture notes, videos, and problem sets. |
 | Stanford NEPR208 | If you prefer learning through specific questions and a more compact set of course materials | [Course page](https://druckmann-lab.github.io/nepr208/) and [public assignments](https://druckmann-lab.github.io/nepr208/assignments/); the current page is for Spring 2026, and the assignments cover perceptrons, neural coding, learning, and memory. |
 
@@ -30,7 +30,7 @@ Free reading access, publicly available source code, and open-source licensing a
 
 **Role:** Shared core; a priority for readers with a computational background. **Starting point:** [Official resource](https://nba.uth.tmc.edu/neuroscience/toc.htm).
 
-**Prerequisites and scope:** High-school biology and basic concepts about cells; no programming required. In Section 1, read the Introduction, Chapter 1 Resting Potentials & Action Potentials, Chapter 2 Ionic Mechanisms of Action Potentials, Chapter 6 Synaptic Transmission in the Central Nervous System, and Chapter 7 Synaptic Plasticity. Select other chapters according to your direction.
+**Prerequisites and scope:** High-school biology and basic concepts about cells; no programming required. In Section 1, read the Introduction, Chapter 1 Resting Potentials & Action Potentials, Chapter 2 Ionic Mechanisms of Action Potentials, Chapter 6 Synaptic Transmission in the Central Nervous System, and Chapter 7 Synaptic Plasticity. Select other chapters according to your chosen track.
 
 **Suggested deliverable:** A one-page concept map: membrane potential → action potential → synaptic transmission → plasticity; explain, for each item, which physiological phenomena the LIF model retains and which it omits.
 
@@ -40,11 +40,11 @@ Free reading access, publicly available source code, and open-source licensing a
 
 ### R02 · Neuronal Dynamics Online Book + Accompanying Python Exercises
 
-**Role:** Shared core; a priority for an introduction to modeling. **Starting point:** [Official resource](https://neuronaldynamics-exercises.readthedocs.io/en/latest/).
+**Role:** Shared core; a priority for readers new to modeling. **Starting point:** [Official resource](https://neuronaldynamics-exercises.readthedocs.io/en/latest/).
 
-**Prerequisites and scope:** Python/NumPy, calculus, and basic concepts of ordinary differential equations; you can begin with the first-order linear equation for the LIF model. First read Chapter 1 Introduction: Neurons and Mathematics, the basics of ionic currents in Chapter 2, and Chapter 3 on synapses; complete the parts of Exercise 1 on minimum input current, the f–I curve, and the refractory period. Leave Chapter 5, AdEx, and the Brunel network for more advanced study in the modeling direction.
+**Prerequisites and scope:** Python/NumPy, calculus, and basic concepts of ordinary differential equations; you can begin with the first-order linear equation for the LIF model. First read Chapter 1 Introduction: Neurons and Mathematics, the basics of ionic currents in Chapter 2, and Chapter 3 on synapses; complete the parts of Exercise 1 on minimum input current, the f–I curve, and the refractory period. Leave Chapter 5, AdEx, and the Brunel network for more advanced study in the modeling track.
 
-**Suggested deliverable:** A reproducible notebook with membrane-potential traces and an f–I curve; compare changes in the refractory period or input current, discuss the model's limitations, and report the time step.
+**Suggested deliverable:** A reproducible notebook with membrane-potential traces and an f–I curve; compare the effects of changing the refractory period or input current, discuss the model's limitations, and report the time step.
 
 **Time and computing:** 6–10 hours (editor's estimate, for the LIF introduction only); the suggested small simulations can generally run on a CPU; the environment has not been installed and the examples have not been executed for this review.
 
@@ -54,7 +54,7 @@ Online book: [Contents](https://neuronaldynamics.epfl.ch/online/index.html); ass
 
 ### R03 · Brian2 Official Interactive Tutorials
 
-**Role:** An elective for the modeling direction; use alongside R02, without adding another full required course. **Starting point:** [Official resource](https://brian2.readthedocs.io/en/stable/resources/tutorials/index.html).
+**Role:** An elective for the modeling track; use alongside R02, without adding another full required course. **Starting point:** [Official resource](https://brian2.readthedocs.io/en/stable/resources/tutorials/index.html).
 
 **Prerequisites and scope:** Python, simple differential equations, and basic concepts of neurons and synapses. Complete Introduction to Brian part 1: Neurons and part 2: Synapses; study part 3: Simulations when you need to understand how to control simulation runs.
 
@@ -66,7 +66,7 @@ Online book: [Contents](https://neuronaldynamics.epfl.ch/online/index.html); ass
 
 ### R04 · MNE-Python Official MEG/EEG Tutorials
 
-**Role:** For the EEG/MEG or BCI direction. **Starting point:** [Official resource](https://mne.tools/stable/auto_tutorials/intro/10_overview.html).
+**Role:** For the EEG/MEG or BCI track. **Starting point:** [Official resource](https://mne.tools/stable/auto_tutorials/intro/10_overview.html).
 
 **Prerequisites and scope:** Python/NumPy, basic concepts of sampling and spectra, and basic familiarity with EEG/MEG signals and event markers. Follow Overview of MEG/EEG analysis → Raw/Epochs/Evoked → bad-channel/artifact handling and filtering → ERP or time–frequency analysis, choosing one complete analysis path first. Leave source localization and complex statistics for later.
 
@@ -80,7 +80,7 @@ MNE is primarily suited to the EEG/MEG data path; for an invasive speech BCI bas
 
 ### R05 · Nilearn Official fMRI Introduction and Haxby Decoding Example
 
-**Role:** For the fMRI/NeuroAI/decoding direction. **Starting point:** [Official resource](https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html).
+**Role:** For the fMRI/NeuroAI/decoding track. **Starting point:** [Official resource](https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html).
 
 **Prerequisites and scope:** Python, linear algebra, and linear models/cross-validation; understand what BOLD, run, and voxel mean. First work through image loading and visualization or a single-subject GLM, then complete Decoding with ANOVA + SVM: face vs house in the Haxby dataset.
 
@@ -92,9 +92,9 @@ MNE is primarily suited to the EEG/MEG data path; for an invasive speech BCI bas
 
 ### R06 · AllenSDK Visual Coding Neuropixels Quick Start
 
-**Role:** For the neural data analysis direction; start with spike recordings from a single session. **Starting point:** [Official resource](https://allensdk.readthedocs.io/en/latest/_static/examples/nb/ecephys_quickstart.html).
+**Role:** For the neural data analysis track; start with spike recordings from a single session. **Starting point:** [Official resource](https://allensdk.readthedocs.io/en/latest/_static/examples/nb/ecephys_quickstart.html).
 
-**Prerequisites and scope:** Python/NumPy/pandas and basic concepts of spike trains, stimuli and trials, and PSTHs. Choose one session from the quickstart, inspect the session/unit metadata, then complete the peristimulus time histograms. Leave image classification for later.
+**Prerequisites and scope:** Python/NumPy/pandas and basic concepts of spike trains, stimuli and trials, and PSTHs. Choose one session from the quickstart, inspect the session/unit metadata, then work through the peristimulus time histograms section. Leave image classification for later.
 
 **Suggested deliverable:** A raster plot and PSTH for one session; record the session ID, unit-quality screening, bin width, stimulus events, and number of trials, and explain the error or variability in the PSTH.
 
@@ -104,7 +104,7 @@ MNE is primarily suited to the EEG/MEG data path; for an invasive speech BCI bas
 
 ### R07 · DANDI: Streaming and Interacting with NWB Data
 
-**Role:** An elective for the data-reproduction direction; practice reading NWB data. **Starting point:** [Official resource](https://docs.dandiarchive.org/example-notebooks/tutorials/bcm_2024/analysis-demo/).
+**Role:** An elective for readers interested in reproducing data analyses; practice reading NWB data. **Starting point:** [Official resource](https://docs.dandiarchive.org/example-notebooks/tutorials/bcm_2024/analysis-demo/).
 
 **Prerequisites and scope:** Python, the basic structure of NWB, and spike trains; understand dataset versions and metadata. Complete only lazy loading → slicing → single unit data in the official notebook, then optionally work on spatial tuning curves.
 
@@ -114,11 +114,11 @@ MNE is primarily suited to the EEG/MEG data path; for an invasive speech BCI bas
 
 **Openness:** A free, open data platform; documentation is under CC-BY 4.0; Dandiset data may use CC-BY 4.0 or CC0, so record the specific license of the dataset you use.
 
-This resource specifically practices reading NWB data; BIDS is a separate standard to study according to your project's data modality.
+The practice here focuses on reading NWB data; BIDS is a separate standard to study according to your project's data modality.
 
 ## 4. Where to Start in the Literature
 
-Select papers according to the question you are working on; classic papers do not all need to come first in chronological order. In particular, read the original Hodgkin–Huxley paper as advanced historical material after a modern textbook and the LIF exercises. The arrows below indicate suggested sequences, not a requirement to read every item closely from beginning to end.
+Select papers according to the question you are working on; there is no need to read all the classics first in chronological order. In particular, read the original Hodgkin–Huxley paper as advanced historical material after a modern textbook and the LIF exercises. The arrows below indicate suggested sequences, not a requirement to read every item closely from beginning to end.
 
 | Path | Suggested reading sequence | Related practice |
 |---|---|---|
@@ -168,7 +168,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **[Simple model of spiking neurons](https://doi.org/10.1109/TNN.2003.820440)**. *IEEE Transactions on Neural Networks*, 14(6), 1569-1572. DOI: `10.1109/TNN.2003.820440`.
 
-**Role:** Core elective reading (required for the modeling direction, after the LIF exercises); intermediate.
+**Role:** Core elective reading (required for the modeling track, after the LIF exercises); intermediate.
 
 **Prerequisites:** The LIF model, differential equations, and basic Python.
 
@@ -178,7 +178,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Access:** [Free full text/author's public version](https://www.izhikevich.org/publications/spikes.pdf). The author's website provides a legally available free PDF and links to examples; this does not establish an open license for the code or paper.
 
-**Author's examples:** [Paper and example starting point](https://www.izhikevich.org/publications/spikes.htm).
+**Author's examples:** [Paper and examples](https://www.izhikevich.org/publications/spikes.htm).
 
 ### P04 · Hodgkin & Huxley (1952)
 
@@ -198,7 +198,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **[Spike-triggered neural characterization](https://doi.org/10.1167/6.4.13)**. *Journal of Vision*, 6(4), 484-507. DOI: `10.1167/6.4.13`.
 
-**Role:** Core elective reading (required for the coding direction); intermediate to advanced.
+**Role:** Core elective reading (required for the neural coding track); intermediate to advanced.
 
 **Prerequisites:** Linear algebra, covariance, probability, and spike trains.
 
@@ -218,7 +218,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Read with this question in mind:** Is low-dimensional structure in PCA sufficient to support a particular neural mechanism? Which structures might arise from preprocessing or task design?
 
-**After-reading task:** Apply PCA to simulated neural population data and report explained variance, preprocessing, and stability on independent data; interpret the projections against the known latent variables.
+**After-reading task:** Apply PCA to simulated neural population data and report the explained-variance ratios, preprocessing, and stability on independent data; interpret the projections in relation to the known latent variables.
 
 **Access:** [Free full text/author's public version](https://pmc.ncbi.nlm.nih.gov/articles/PMC4433019/). A free, full-text author manuscript is available in PMC; no subscription is needed to read it, but this does not establish an open reuse license.
 
@@ -230,7 +230,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Prerequisites:** Supervised learning, train/test splits, cross-validation, and basic statistics.
 
-**Read with this question in mind:** Does your test set represent new trials, new sessions, or new participants? Has hyperparameter tuning seen any test information?
+**Read with this question in mind:** Does your test set represent new trials, new sessions, or new participants? Was any test information used during hyperparameter tuning?
 
 **After-reading task:** Using simulated or public data grouped by participant or session, compare a random split with a grouped split that matches the prediction target; keep all feature selection and hyperparameter tuning within the training folds.
 
@@ -276,9 +276,9 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Read with this question in mind:** How can stable and unstable fixed points, slow points, and their local linearization reveal the computational mechanisms of a trained RNN?
 
-**After-reading task:** First find fixed points in a two-dimensional nonlinear system and calculate the Jacobian eigenvalues, then try to explain state transitions in a small RNN. This is an exercise designed for teaching.
+**After-reading task:** First find fixed points in a two-dimensional nonlinear system and calculate the Jacobian eigenvalues, then try to explain state transitions in a small RNN. This teaching exercise was designed for this index.
 
-**Limits of interpretation:** Low-dimensional projections can hide stability directions; interpretations based on local linearization hold only within the region where the approximation applies.
+**Limits of interpretation:** Low-dimensional projections can hide stable and unstable directions; interpretations based on local linearization hold only within the region where the approximation applies.
 
 **Access:** No verified free full-text source was found during this check; the DOI above is retained. This is advanced optional reading, outside the main pathway that requires free access.
 
@@ -330,7 +330,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Access:** [Free full text/author's public version](https://pmc.ncbi.nlm.nih.gov/articles/PMC11549734/). The Europe PMC record provides free/open-access full text and a PMCID; free reading does not imply unrestricted redistribution.
 
-**Public code:** [Authors' repository](https://github.com/gyyang/multitask). The README is accessible; it provides the paper.py analysis entry point, 20 pretrained models, and training examples. No training or reproduction was run.
+**Public code:** [Authors' repository](https://github.com/gyyang/multitask). The README is accessible; it provides the paper.py analysis entry point, 20 pretrained models, and training examples. No training or reproduction was performed during this check.
 
 **Environment:** The README reports testing with TensorFlow 1.8.0 and Python 2.7/3.6 on MacOS 10.13/Ubuntu 16.04; an older environment or your own migration is required.
 
@@ -358,7 +358,7 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **Prerequisites:** PCA or factor analysis, linear readouts, and experimental controls.
 
-**Read with this question in mind:** Why can changing the mapping from neural activity to cursor movement within and outside the manifold test constraints on short-term learning?
+**Read with this question in mind:** How can within-manifold and outside-manifold changes to the mapping from neural activity to cursor movement test constraints on short-term learning?
 
 **After-reading task:** Generate neural activity from low-dimensional latent variables and compare within-manifold and outside-manifold readout transformations; draw a schematic and explain that it is a conceptual demonstration, not a reproduction of the original experiment.
 
@@ -378,11 +378,11 @@ Each entry gives a standard citation, a suggested reading question, an exercise,
 
 **After-reading task:** Start with the authors' publicly available intermediate results/weights and notebooks for offline evaluation; check the data splits and WER calculation first, then compare results with and without the language model. Retraining the entire published system should not be a required introductory task.
 
-**Limits of interpretation:** The study involved one participant; a high-performance demonstration does not establish validation across participants or in everyday deployment. Reproducing the offline public code does not include reproducing the clinical experiment.
+**Limits of interpretation:** The study involved one participant; a high-performance demonstration does not mean that performance has been validated across participants or in everyday use. Reproducing results with the public code offline does not amount to reproducing the clinical experiment.
 
 **Access:** [Free full text/author's public version](https://pmc.ncbi.nlm.nih.gov/articles/PMC10468393/). The Europe PMC record provides free/open-access full text and a PMCID; free reading does not imply unrestricted redistribution.
 
-**Public code:** [Authors' repository](https://github.com/fwillett/speechBCI). The code statement in the PMC full text and the GitHub README mutually connect the paper and repository; the README lists three notebooks for data preparation, RNN training, and language-model inference. The code was not executed.
+**Public code:** [Authors' repository](https://github.com/fwillett/speechBCI). The code availability statement in the PMC full text points to the GitHub repository, and its README identifies the paper; the README lists three notebooks for data preparation, RNN training, and language-model inference. The code was not executed.
 
 ## 6. Paper Reading Card
 
@@ -391,7 +391,7 @@ Answer the following questions on one page for each paper. Study one key figure 
 1. What is the research question? Which of Marr's levels does it address? Is the paper a review, a methods paper, or an empirical study?
 2. What are the model assumptions, variables, and experimental readouts? Which quantities are measured, and which are inferred only by the model?
 3. Which figure or control supports the central conclusion? What are the sampling unit, data splits, baselines, and uncertainty?
-4. Did feature selection, preprocessing fitting, or hyperparameter tuning use test information? How are temporal, participant, and session dependencies handled?
+4. Did feature selection, fitting preprocessing steps, or hyperparameter tuning use test information? How are dependencies across time and within participants or sessions handled?
 5. Do the authors demonstrate prediction, association, or constraints on a mechanism? What alternative explanations remain?
 6. What is the smallest result I can reproduce first? Are data, code, or weights available? Are the environment, license, and computing requirements compatible with my resources?
 7. What might explain discrepancies in reproduction? Which additional analysis could distinguish between explanations?
@@ -400,9 +400,9 @@ Minimum project deliverables: an executable notebook, input data and software ve
 
 ## 7. Verification Scope and Maintenance
 
-This is a package of classic and methodological readings selected to address teaching gaps, not an exhaustive search or a review of the frontier through 2026. Courses and tools were checked against official catalogs, tutorials, and license text; bibliographic records were mainly cross-checked with Crossref and Europe PMC/PubMed, and available abstracts were read. The database record for Hodgkin–Huxley has no abstract; this check covered its metadata and the scanned full-text source. Selected author full texts, code statements, and READMEs received targeted checks; not every paper was read in full, and not all examples were installed or executed.
+This is a collection of classic and methodological readings selected to address teaching gaps, not an exhaustive literature search or a review of the state of the art as of 2026. Courses and tools were checked against official catalogs, tutorials, and license text; bibliographic records were mainly cross-checked with Crossref and Europe PMC/PubMed, and available abstracts were read. The database record for Hodgkin–Huxley has no abstract; this check covered its metadata and the scanned full-text source. Selected author full texts, code statements, and READMEs received targeted checks; not every paper was read in full, and not all examples were installed or executed.
 
-Free full-text status: Public versions in PMC or on publisher or author-institution websites were found for most papers. The free full text of Abbott (2008) is indexed in databases, but automated access returned 403 during this check; no free full text was verified for Sussillo & Barak (2013). Neither is required material where unrestricted free access is necessary.
+Free full-text status: Public versions in PMC or on publisher or author-institution websites were found for most papers. The free full text of Abbott (2008) is indexed in databases, but automated access returned 403 during this check; no free full text was verified for Sussillo & Barak (2013). Neither is required material where readily available free access is necessary.
 
 Metadata corrections: Schwartz (2006) uses pages 484–507; Crossref's 13 is the article number. For RSA (2008), Europe PMC supplied all three authors—Kriegeskorte, Mur, and Bandettini—and 2:4. Varoquaux uses the formal journal year 2017; the free preprint first appeared in 2016.
 
