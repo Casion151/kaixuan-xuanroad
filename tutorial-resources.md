@@ -2,30 +2,21 @@
 
 本文件用于查询课程、许可证和完整书目。第一次学习请先看同目录的[逐步导读](计算神经科学_开放资源与分层阅读清单.md)，按指定小节和问题进入外部资源。
 
-核查日期：2026-09-08。用途：作为原 8 页 tutorial 的补充稿；面向有不同生物学、数学和编程基础的初学者，帮助其完成一个可解释、可复现的小项目。
+核查日期：2026-09-08。面向有不同生物学、数学和编程基础的初学者，帮助其完成一个可解释、可复现的小项目。
 
-本稿整理 7 项补充资源（其中 AllenSDK、DANDI 是原有条目的实践化）、3 个原有主课的明确入口，以及 16 篇分层文献（13 篇新增、3 篇原有资源的规范整理）。推荐范围和练习由本次编排提出，不代表课程官方要求。
+这里整理 7 项补充资源、3 门主课的明确入口，以及 16 篇分层文献。推荐范围和练习仅供学习参考，不代表课程官方要求。
 
-## 1. 纳入原 tutorial 的方式
+## 1. 如何使用这份索引
 
 主课只选一门。先补与自身背景不匹配的先修，再完成一个小练习，随后根据项目问题进入文献。单神经元模型、神经数据分析、NeuroAI 和 BCI 的选修资源无需全部学习。
 
-| 原文位置 | 建议加入的内容 | 作用 |
-|---|---|---|
-| 第 1—2 页，基础 | Neuroscience Online；将 Neuromatch 的数学/Python 先修明确索引出来 | 为计算背景与生物背景读者分别补齐缺口 |
-| 第 2 页，理论建模 | Neuronal Dynamics 的 LIF 练习；按需配 Brian2 | 把模型阅读落实为可运行实验 |
-| 第 2 页，数据分析 | MNE；AllenSDK 的单 session PSTH | 把泛泛的 notebook 要求变成具体任务 |
-| 第 3、5 页，解码/成像 | Nilearn 的分组交叉验证示例 | 训练可靠的性能评估 |
-| 第 5 页，开放数据与规范 | DANDI/NWB 流式读取和版本记录 | 把数据门户变成可追踪的输入 |
-| 第 8 页，读论文与项目 | 本稿的阅读路线、阅读卡和完成标准 | 建立课程—方法—证据—实践的联系 |
-
-## 2. 主课选择：继续使用原清单中的资源
+## 2. 主课选择
 
 | 主课 | 适用情况 | 明确入口与使用范围 |
 |---|---|---|
 | Neuromatch Computational Neuroscience | 默认自学主线；希望同时接触模型与数据分析 | [在线教程](https://compneuro.neuromatch.io/tutorials/intro.html)；先做 Python、线性代数、微积分和概率统计先修，再进入 modeling、模型拟合和方向单元。公开自学材料与正式带助教项目申请分开。 |
-| MIT 9.40 Introduction to Neural Computation | 喜欢完整大学课程、讲课视频和习题 | [官方 OCW](https://ocw.mit.edu/courses/9-40-introduction-to-neural-computation-spring-2018/)；有讲义、视频和题集。替换原文的个人 solutions 仓库作为主入口。 |
-| Stanford NEPR208 | 希望沿具体问题和较紧凑的课程材料学习 | [课程页](https://druckmann-lab.github.io/nepr208/)与[公开作业](https://druckmann-lab.github.io/nepr208/assignments/)；当前页面为 Spring 2026，作业覆盖感知机、神经编码、学习与记忆。注明版本。 |
+| MIT 9.40 Introduction to Neural Computation | 喜欢完整大学课程、讲课视频和习题 | [官方 OCW](https://ocw.mit.edu/courses/9-40-introduction-to-neural-computation-spring-2018/)；有讲义、视频和题集。 |
+| Stanford NEPR208 | 希望沿具体问题和较紧凑的课程材料学习 | [课程页](https://druckmann-lab.github.io/nepr208/)与[公开作业](https://druckmann-lab.github.io/nepr208/assignments/)；当前页面为 Spring 2026，作业覆盖感知机、神经编码、学习与记忆。 |
 
 三门课是替代选择。无需以完成所有课程作为进入小项目的条件。
 
@@ -57,7 +48,7 @@
 
 **开放程度：**书免费在线阅读但保留版权；练习代码为 GNU GPL 2.0 开源软件。
 
-在线书：[目录](https://neuronaldynamics.epfl.ch/online/index.html)；指定练习：[LIF](https://neuronaldynamics-exercises.readthedocs.io/en/latest/exercises/leaky-integrate-and-fire.html)。配套练习文档较旧，正式作为必做作业前需验证并固定依赖版本。
+在线书：[目录](https://neuronaldynamics.epfl.ch/online/index.html)；指定练习：[LIF](https://neuronaldynamics-exercises.readthedocs.io/en/latest/exercises/leaky-integrate-and-fire.html)。配套练习文档较旧，运行前需检查并固定依赖版本。
 
 ### R03 · Brian2 官方交互教程
 
@@ -79,7 +70,7 @@
 
 **建议交付物：**sample 数据的一个条件对比：预处理说明＋ERP/ERF 或功率谱图；比较一个合理预处理选择对结果的影响，报告排除的 trial 数。
 
-**投入：**4—8 小时（编者估计）；入门传感器分析通常 CPU 即可；示例需下载数据，原教程应明确数据体积并限定子集。
+**投入：**4—8 小时（编者估计）；入门传感器分析通常 CPU 即可；示例需下载数据，下载前确认数据体积并限定子集。
 
 **开放程度：**开源软件，BSD 3-Clause；免费教程与可下载示例。
 
@@ -99,19 +90,19 @@ MNE 主要对应 EEG/MEG 数据路线；侵入式脉冲语音 BCI 应按自己�
 
 ### R06 · AllenSDK Visual Coding Neuropixels Quick Start
 
-**定位：**将原有 Allen 门户条目细化；不是新增门户。**入口：**[官方资源](https://allensdk.readthedocs.io/en/latest/_static/examples/nb/ecephys_quickstart.html)。
+**定位：**神经数据分析方向；从单 session 的脉冲记录起步。**入口：**[官方资源](https://allensdk.readthedocs.io/en/latest/_static/examples/nb/ecephys_quickstart.html)。
 
 **先修与范围：**Python/NumPy/pandas、spike train、stimulus 与 trial、PSTH 基本概念。从 quickstart 选一个 session，浏览 session/unit 元数据，再完成 peristimulus time histograms。image classification 留作后续。
 
 **建议交付物：**单 session 的 raster＋PSTH；记录 session ID、unit 质量筛选、bin width、刺激事件和试次数，并说明 PSTH 的误差/变异。
 
-**投入：**6—10 小时（编者估计，受数据获取影响）；CPU；Allen 数据较大，应在正式作业中锁定 session 和下载范围，勿要求学生下载全库。
+**投入：**6—10 小时（编者估计，受数据获取影响）；CPU；Allen 数据较大，先选定 session 和下载范围，无需下载全库。
 
 **开放程度：**公开源码及免费教程；Allen Institute Software License 含商业再分发限制，不笼统标作标准开源许可；数据许可另查。
 
 ### R07 · DANDI：Streaming and interacting with NWB data
 
-**定位：**数据复现方向选修；把已有 NWB/BIDS 规范链接变成具体练习。**入口：**[官方资源](https://docs.dandiarchive.org/example-notebooks/tutorials/bcm_2024/analysis-demo/)。
+**定位：**数据复现方向选修；练习 NWB 数据读取。**入口：**[官方资源](https://docs.dandiarchive.org/example-notebooks/tutorials/bcm_2024/analysis-demo/)。
 
 **先修与范围：**Python、NWB 基本结构、spike train；理解数据集版本与元数据。只完成官方 notebook 的 lazy loading → slicing → single unit data，之后选做空间调谐曲线。
 
@@ -147,7 +138,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Theoretical Neuroscience Rising](https://doi.org/10.1016/j.neuron.2008.10.019)**. *Neuron*, 60(3), 489-495. DOI: `10.1016/j.neuron.2008.10.019`。
 
-**定位：**选读（开篇导读）；入门。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**选读（开篇导读）；入门。
 
 **先修：**基础神经科学术语；无需先掌握全部推导。
 
@@ -161,7 +152,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Circular analysis in systems neuroscience: the dangers of double dipping](https://doi.org/10.1038/nn.2303)**. *Nature Neuroscience*, 12(5), 535-540. DOI: `10.1038/nn.2303`。
 
-**定位：**核心必读；入门至中级（先理解概念，再读技术论证）。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心必读；入门至中级（先理解概念，再读技术论证）。
 
 **先修：**假设检验、特征选择、独立样本的概念。
 
@@ -175,7 +166,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Simple model of spiking neurons](https://doi.org/10.1109/TNN.2003.820440)**. *IEEE Transactions on Neural Networks*, 14(6), 1569-1572. DOI: `10.1109/TNN.2003.820440`。
 
-**定位：**核心选读（模型方向必读；在LIF练习之后）；中级。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心选读（模型方向必读；在LIF练习之后）；中级。
 
 **先修：**LIF模型、微分方程、基础Python。
 
@@ -191,7 +182,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[A quantitative description of membrane current and its application to conduction and excitation in nerve](https://doi.org/10.1113/jphysiol.1952.sp004764)**. *The Journal of Physiology*, 117(4), 500-544. DOI: `10.1113/jphysiol.1952.sp004764`。
 
-**定位：**选读（历史进阶，放在LIF及现代教材之后）；进阶。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**选读（历史进阶，放在LIF及现代教材之后）；进阶。
 
 **先修：**膜电位、离子电流、微分方程和数值积分。
 
@@ -205,7 +196,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Spike-triggered neural characterization](https://doi.org/10.1167/6.4.13)**. *Journal of Vision*, 6(4), 484-507. DOI: `10.1167/6.4.13`。
 
-**定位：**核心选读（编码方向必读）；中级至进阶。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心选读（编码方向必读）；中级至进阶。
 
 **先修：**线性代数、协方差、概率、脉冲序列。
 
@@ -219,7 +210,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Dimensionality reduction for large-scale neural recordings](https://doi.org/10.1038/nn.3776)**. *Nature Neuroscience*, 17(11), 1500-1509. DOI: `10.1038/nn.3776`。
 
-**定位：**核心必读；中级。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心必读；中级。
 
 **先修：**线性代数、PCA、基础概率统计。
 
@@ -233,7 +224,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines](https://doi.org/10.1016/j.neuroimage.2016.10.038)**. *NeuroImage*, 145, 166-179. DOI: `10.1016/j.neuroimage.2016.10.038`。
 
-**定位：**核心必读（任何解码项目之前）；中级至进阶。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心必读（任何解码项目之前）；中级至进阶。
 
 **先修：**监督学习、训练/测试划分、交叉验证、基础统计。
 
@@ -247,7 +238,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Could a Neuroscientist Understand a Microprocessor?](https://doi.org/10.1371/journal.pcbi.1005268)**. *PLOS Computational Biology*, 13(1), e1005268. DOI: `10.1371/journal.pcbi.1005268`。
 
-**定位：**核心选读（结课讨论）；入门至中级。**原清单关系：**新增；主任务已对照原PDF清单去重。
+**定位：**核心选读（结课讨论）；入门至中级。
 
 **先修：**基本数据分析、相关与因果的区别。
 
@@ -261,7 +252,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Computation Through Neural Population Dynamics](https://doi.org/10.1146/annurev-neuro-092619-094115)**. *Annual Review of Neuroscience*, 43(1), 249-275. DOI: `10.1146/annurev-neuro-092619-094115`。
 
-**定位：**动力学 第1篇；中等；先读动力系统primer和图示。**原清单关系：**新增。
+**定位：**动力学 第1篇；中等；先读动力系统primer和图示。
 
 **先修：**线性代数、常微分方程基础、PCA。
 
@@ -277,7 +268,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Opening the Black Box: Low-Dimensional Dynamics in High-Dimensional Recurrent Neural Networks](https://doi.org/10.1162/NECO_a_00409)**. *Neural Computation*, 25(3), 626-649. DOI: `10.1162/NECO_a_00409`。
 
-**定位：**动力学 第2篇，在Vyas综述及二维系统练习后读；高；建议选读/进阶。**原清单关系：**新增。
+**定位：**动力学 第2篇，在Vyas综述及二维系统练习后读；高；建议选读/进阶。
 
 **先修：**常微分方程、Jacobian与特征值、RNN训练。
 
@@ -293,7 +284,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[A deep learning framework for neuroscience](https://doi.org/10.1038/s41593-019-0520-2)**. *Nature Neuroscience*, 22(11), 1761-1770. DOI: `10.1038/s41593-019-0520-2`。
 
-**定位：**NeuroAI 第1篇；入门综述（需了解神经网络基本概念）。**原清单关系：**已有，原PDF以题名及Danijar资源呈现；建议规范为Richards et al. (2019)，不是新增文献。
+**定位：**NeuroAI 第1篇；入门综述（需了解神经网络基本概念）。
 
 **先修：**神经网络基础、监督学习与优化的基本概念。
 
@@ -309,7 +300,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Representational similarity analysis – connecting the branches of systems neuroscience](https://doi.org/10.3389/neuro.06.004.2008)**. *Frontiers in Systems Neuroscience*, 2, 4. DOI: `10.3389/neuro.06.004.2008`。
 
-**定位：**NeuroAI 第2篇；中等方法论文。**原清单关系：**新增。
+**定位：**NeuroAI 第2篇；中等方法论文。
 
 **先修：**相关与距离度量、矩阵操作、重采样基础。
 
@@ -325,7 +316,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Task representations in neural networks trained to perform many cognitive tasks](https://doi.org/10.1038/s41593-018-0310-2)**. *Nature Neuroscience*, 22(2), 297-306. DOI: `10.1038/s41593-018-0310-2`。
 
-**定位：**NeuroAI 第3篇；动力学路线在掌握简单RNN后读；进阶；代码环境较旧。**原清单关系：**已有代码入口；建议补规范书目和阅读任务。
+**定位：**NeuroAI 第3篇；动力学路线在掌握简单RNN后读；进阶；代码环境较旧。
 
 **先修：**RNN、梯度训练、PCA与聚类。
 
@@ -345,7 +336,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[A Neural Substrate of Prediction and Reward](https://doi.org/10.1126/science.275.5306.1593)**. *Science*, 275(5306), 1593-1599. DOI: `10.1126/science.275.5306.1593`。
 
-**定位：**学习 第1篇；入门概念论文；公式可分第二遍读。**原清单关系：**新增。
+**定位：**学习 第1篇；入门概念论文；公式可分第二遍读。
 
 **先修：**条件学习基础、期望值、简单迭代更新。
 
@@ -361,7 +352,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[Neural constraints on learning](https://doi.org/10.1038/nature13665)**. *Nature*, 512(7515), 423-426. DOI: `10.1038/nature13665`。
 
-**定位：**学习 第2篇；BCI 第1篇；中等；适合综述后第一篇实证。**原清单关系：**新增。
+**定位：**学习 第2篇；BCI 第1篇；中等；适合综述后第一篇实证。
 
 **先修：**PCA或因子分析、线性读出、实验对照。
 
@@ -377,7 +368,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **[A high-performance speech neuroprosthesis](https://doi.org/10.1038/s41586-023-06377-x)**. *Nature*, 620(7976), 1031-1036. DOI: `10.1038/s41586-023-06377-x`。
 
-**定位：**BCI 第2篇；进阶应用；适合结课选题。**原清单关系：**已有；建议配数据、代码和评估问题整理。
+**定位：**BCI 第2篇；进阶应用；适合结课选题。
 
 **先修：**序列模型、训练/验证/测试划分、错误率评估。
 
@@ -391,7 +382,7 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 **公开代码：**[作者仓库](https://github.com/fwillett/speechBCI)。PMC全文的代码声明与GitHub README双向对应论文；README列出数据准备、RNN训练、语言模型推断3个notebook。未执行代码。
 
-## 6. 可直接加入第 8 页的论文阅读卡
+## 6. 论文阅读卡
 
 每篇用一页回答以下问题，先精读一张关键图，再决定是否读全部推导。
 
@@ -413,6 +404,4 @@ Abbott (2008) 可作开篇理论导读。若暂时无法打开其免费全文，
 
 元数据修正：Schwartz (2006) 使用页码484–507，Crossref的13为文章编号；RSA (2008) 用Europe PMC补齐Kriegeskorte、Mur、Bandettini三位作者及2:4；Varoquaux使用正式期刊年份2017，免费预印本始于2016。
 
-重新发布 tutorial 前，建议逐条确认主线 notebook 的依赖、数据大小和最小运行结果；给课程标注版本，给论文保存 DOI。原有 Neuromatch、Dayan & Abbott 等资源继续保留，新增条目用于补足明确的学习任务。
-
-同目录文件：`references.bib` 为16篇规范引文；`evidence/` 保存课程和文献核查记录；`build_supplement.py` 为从核验数据生成此清单和BibTeX的脚本。
+同目录的 `references.bib` 包含 16 篇规范引文。

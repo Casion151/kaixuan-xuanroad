@@ -133,7 +133,7 @@ Use this section when your next neuroscience question needs a trainable neural n
 
 - **Stanford CS231n:** a useful route into neural networks through image recognition. Start with the [course](https://cs231n.stanford.edu/) and its [notes](https://cs231n.github.io/), concentrating on classification, loss functions, gradients, and backpropagation before convolutional networks. A loss assigns a score to prediction errors; backpropagation computes how changing each weight affects that score. Try tracing the dimensions of one input batch and explaining one training step. For NeuroAI, keep asking which parts of an image model could be compared with visual responses. Detailed architectures can follow after the basic training loop makes sense.
 - **CMU Deep Learning, Spring 2025:** another substantial [core course](https://deeplearning.cs.cmu.edu/S25/index.html). Choose it as an alternative structured route, and follow its prerequisites and assignments in order; the archived S25 materials need not be studied alongside a second full deep learning course.
-- **Deep Learning Systems:** the [lectures](https://dlsyscourse.org/lectures/) are useful when you want to understand how a framework carries out differentiation and computation. Return here after writing a small training loop; the duplicate entry in the original hands-on list is consolidated here.
+- **Deep Learning Systems:** the [lectures](https://dlsyscourse.org/lectures/) are useful when you want to understand how a framework carries out differentiation and computation. Return here after writing a small training loop.
 - **Stanford CS224n:** use the [course schedule](https://web.stanford.edu/class/cs224n/index.html#schedule) for language models, word representations, and sequence modeling. For a speech or language project, first connect a sequence of inputs to its prediction target, then choose the relevant model lectures.
 
 **Hands-on repos & references**
@@ -331,4 +331,4 @@ Brain-to-Text '24/'25 in Section 9 can extend this into a data-loading → model
 
 The [Chinese guided tutorial](计算神经科学_开放资源与分层阅读清单.md) provides longer concept explanations, bounded readings, small exercises, and worked checks for selected starting points. The [resource and literature index](资源与文献索引.md) records the supplementary sources and reading details. Use these alongside the relevant entries here; the complete original 18-category resource catalog is included in this main guide.
 
-*Edition note: full original-resource merge completed on 11 September 2026. Selected supplementary pages and literature were checked on 8 September 2026; the merge does not represent a new availability check of every legacy link. The external notebooks were not executed as part of this edit.*
+*Resource note: selected supplementary pages and literature were checked on 8 September 2026. Availability was not rechecked for every link from the original list. The external notebooks have not been tested here.*
