@@ -1,6 +1,6 @@
 # Starting from Biology: Reflections on the Path to Protein Design
 
-Written by Kaixuan. English translation with AI assistance.
+Written by Kaixuan.
 
 <a id="early-learning"></a>
 

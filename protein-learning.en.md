@@ -1,6 +1,6 @@
 # A Protein Design Learning Path for Students with a Biology Background
 
-Written by Kaixuan. English translation with AI assistance.
+Written by Kaixuan.
 
 In recent years, deep learning has been rapidly changing fields such as protein structure prediction, protein design, antibody design, and drug discovery and development.
 
