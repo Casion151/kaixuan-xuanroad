@@ -1,0 +1,32 @@
+教育部隸書 / TW-MOE-Li, Version 3.00, June 2019
+Copyright / attribution: 中華民國教育部 (Ministry of Education, Republic of China).
+
+License: Creative Commons Attribution-NoDerivs 3.0 Taiwan (CC BY-ND 3.0 TW).
+License deed: https://creativecommons.org/licenses/by-nd/3.0/tw/
+Full legal terms: https://creativecommons.org/licenses/by-nd/3.0/tw/legalcode
+
+Original copyright statements embedded in the unchanged TTF:
+
+(c) This license allows for redistribution, commercial and non-commercial, as long as it is passed along unchanged and in whole, with credit to MOE.
+
+(c)本字形檔採用創用CC姓名標示-禁止改作 3.0 臺灣版授權。如需引用，請標示中華民國教育部。
+
+(c)本字形档采用创用CC姓名标示-禁止改作 3.0 台湾版授权。如需引用，请标示中华民国教育部。
+
+The original font is redistributed here free of charge, unchanged and in whole. It has not been converted, subsetted, merged, renamed internally, or modified. The website only assigns a CSS family alias and selects Chinese glyph ranges. Copyright, authorship and the original font metadata are preserved. No endorsement of this website by the copyright holder is implied.
+
+Official publication references:
+https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/MoeLI-3.0.zip
+https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/eduli.pdf
+
+Education-network notice confirming the official publication and exact license/attribution:
+https://2blog.ilc.edu.tw/868/48599/
+
+Binary archive used, with fixed revision and independently matching distribution:
+https://github.com/typst-doc-cn/moe-tw-fonts/blob/46f5d417406b25a145e37746e927583f15b1490d/fonts/eduLi-v3.0-2019-06.ttf
+https://font.doany.cn/fonts/%E5%8F%B0%E6%B9%BE%E6%95%99%E8%82%B2%E9%83%A8/MoeLI.zip
+
+SHA-256: f0ba5eda31727ad89cc0b1f6b9a7dfda02f061fa101c18548b6f8ea0145c108b
+MD5: 69df8205904fb4d4a5892005913107bf
+Size: 5,243,908 bytes
+Obtained: 2026-09-13
