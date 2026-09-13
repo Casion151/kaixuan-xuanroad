@@ -1,5 +1,7 @@
 # Intro to computational neuroscience
 
+This resource map was compiled and written entirely by Kaixuan.
+
 Three levels of inquiry suggested by David Marr:
 
 **Computational:** What problem does the brain solve, and why?

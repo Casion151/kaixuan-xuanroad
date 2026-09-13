@@ -1,0 +1,17 @@
+@import url('./tutorial-v6.css');
+
+.reader .authorship-note {
+  margin: 18px 0 28px;
+  padding: 12px 16px;
+  border-left: 2px solid #74e4ec66;
+  background: #74e4ec08;
+  color: #a7bbc6;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.view-tabs a { white-space: normal; }
+@media(max-width:600px) {
+  .view-tabs { align-items: stretch; }
+  .view-tabs a { flex: 1 1 0; text-align: center; padding: 12px 8px; }
+  .reader .authorship-note { padding: 10px 12px; font-size: 13px; }
+}
