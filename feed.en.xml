@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>KaiXuan · XuanRoad</title>
+    <link>https://casion151.github.io/kaixuan-xuanroad/?lang=en</link>
+    <description>Articles, tutorials, and personal reflections by Kaixuan.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 13 Sep 2026 06:41:04 GMT</lastBuildDate>
+    <ttl>60</ttl>
+    <atom:link href="https://casion151.github.io/kaixuan-xuanroad/feed.en.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Protein Design Learning Path for Biology Students</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/protein-learning.html?lang=en</link>
+      <guid isPermaLink="false">urn:kaixuan:post:protein-learning</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Start with existing protein-design tools, build foundations in machine learning and deep learning, and connect models to biological questions through AlphaFold, papers, and projects.</description>
+    </item>
+    <item>
+      <title>From Biology to Protein Design: Personal Reflections</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/protein-reflections.html?lang=en</link>
+      <guid isPermaLink="false">urn:kaixuan:post:protein-reflections</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>My first encounters with deep learning and my reflections on finding a research direction between computational neuroscience and protein design.</description>
+    </item>
+    <item>
+      <title>Computational Neuroscience: A Resource Map and Guided Tutorial</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/tutorial-map.html?lang=en</link>
+      <guid isPermaLink="false">urn:kaixuan:post:computational-neuroscience</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Explore computational neuroscience through an 18-category English resource map, with guided learning, practical tasks, and a reading index available in Chinese and English.</description>
+    </item>
+  </channel>
+</rss>

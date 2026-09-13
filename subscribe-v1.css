@@ -1,0 +1,21 @@
+@import url('./tutorial-v9.css');
+.subscription-main { max-width:850px; margin:0 auto; padding:80px 32px 100px; }
+.subscription-main .eyebrow { margin-bottom:22px; }
+.subscription-main h1 { font-size:clamp(34px,6vw,56px); line-height:1.25; margin:0 0 24px; color:#edf8ff; }
+.subscription-lead { font-size:18px; line-height:1.8; color:#a8bfcb; max-width:630px; margin:0; }
+.subscription-card { margin:40px 0 28px; padding:34px; border:1px solid #284452; border-radius:14px; background:radial-gradient(ellipse at top left,#15435250,transparent 75%),#0d151e; }
+.subscription-card h2 { margin:0 0 14px; font-size:23px; color:#daf5ff; line-height:1.5; }
+.subscription-card p { margin:0 0 24px; line-height:1.85; color:#acc0cc; }
+.subscription-card .primary-link { font-size:17px; padding:13px 22px; }
+.subscription-card .provider-note { font-size:13px; margin:22px 0 0; color:#8aa6b7; }
+.subscription-main .rss-option { font-size:15px; line-height:1.9; color:#96adbc; }
+.subscription-main .rss-option a { margin-left:12px; }
+.subscription-main .coverage { margin-top:28px; font-size:14px; line-height:1.9; color:#88a2b4; }
+.subscription-page .site-footer { max-width:850px; margin:0 auto; padding:25px 32px; }
+@media(max-width:600px) {
+  .subscription-main { padding:52px 22px 60px; }
+  .subscription-card { padding:25px 22px; margin-top:30px; }
+  .subscription-card h2 { font-size:21px; }
+  .subscription-lead { font-size:17px; }
+  .subscription-card .primary-link { display:flex; justify-content:space-between; }
+}

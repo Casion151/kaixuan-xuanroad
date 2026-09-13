@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>開玄 · 玄路</title>
+    <link>https://casion151.github.io/kaixuan-xuanroad/?lang=zh-Hant</link>
+    <description>Kaixuan 的文章、教程與個人隨想。</description>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 13 Sep 2026 06:41:04 GMT</lastBuildDate>
+    <ttl>60</ttl>
+    <atom:link href="https://casion151.github.io/kaixuan-xuanroad/feed.zh-Hant.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面向生物背景的蛋白質設計學習路線</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/protein-learning.html?lang=zh-Hant</link>
+      <guid isPermaLink="false">urn:kaixuan:post:protein-learning</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>從現有蛋白質設計工具入手，逐步建立機器學習與深度學習基礎，再通過 AlphaFold、論文和項目實踐連接模型與生物學問題。</description>
+    </item>
+    <item>
+      <title>從生物學出發：走向蛋白質設計的隨想</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/protein-reflections.html?lang=zh-Hant</link>
+      <guid isPermaLink="false">urn:kaixuan:post:protein-reflections</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>我的深度學習入門經歷，以及在計算神經科學與蛋白質設計之間尋找研究方向的思考。</description>
+    </item>
+    <item>
+      <title>計算神經科學：資源地圖與入門教程</title>
+      <link>https://casion151.github.io/kaixuan-xuanroad/tutorial-map.html?lang=zh-Hant</link>
+      <guid isPermaLink="false">urn:kaixuan:post:computational-neuroscience</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>從 18 類英文資源地圖進入計算神經科學，結合中英文逐步導讀、實踐任務和閱讀索引，尋找適合自己的學習路徑。</description>
+    </item>
+  </channel>
+</rss>

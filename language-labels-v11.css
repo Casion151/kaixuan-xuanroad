@@ -1,0 +1,65 @@
+/* The same fixed language names remain visible in every interface language. */
+.language-picker .language-toggle {
+  min-width: 132px;
+  height: 36px;
+  padding: 0 8px;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.language-picker .language-toggle .language-label {
+  display: inline-block;
+  font-family: var(--site-font-sans, "Alegreya", "KaiXuan Lishu", serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.language-picker .language-toggle .language-toggle-divider {
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+  .language-picker .language-toggle {
+    min-width: 116px;
+    height: 34px;
+    padding: 0 7px;
+    gap: 2px;
+  }
+  .language-picker .language-toggle .language-label { font-size: 16px; }
+  .language-picker .language-toggle .language-toggle-divider { font-size: 12px; }
+}
+
+/* Reading pages keep the full language control, site name, and return link. */
+@media (max-width: 600px) {
+  body[data-tutorial-view], body.protein-page { --header: 84px; }
+  .site-header .header-inner {
+    min-height: var(--header);
+    padding: 9px 17px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 7px;
+  }
+  .site-header .header-brand {
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 0;
+  }
+  .site-header .header-actions {
+    justify-content: flex-end;
+    min-height: 19px;
+    gap: 12px;
+  }
+  .site-header .header-actions a { white-space: nowrap; }
+  body[data-tutorial-view] .toc-sidebar,
+  body.protein-page .toc-sidebar { top: calc(var(--header) + 2px); }
+  body[data-tutorial-view] .reader,
+  body[data-tutorial-view] .reader :is(h1, h2, h3, a[id]:not([href])),
+  body.protein-page .reader,
+  body.protein-page .reader :is(h1, h2, h3, a[id]:not([href])) {
+    scroll-margin-top: calc(var(--header) + 80px);
+  }
+}
