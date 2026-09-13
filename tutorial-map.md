@@ -192,7 +192,7 @@ Before a decoding project, return to the validation readings in Section 6, espec
 - **Neurosynth:** [fMRI meta-analysis and decoding tools](https://neurosynth.org/) connect terms in the literature with reported brain locations. Pick one term and inspect what the map summarizes; an association between a location and a term does not make that location a unique marker of the mental process.
 - **Nilearn, fMRI decoding:** use the [Haxby face/house example](https://nilearn.github.io/stable/auto_examples/02_decoding/plot_haxby_anova_svm.html) after understanding classification and cross-validation. A voxel is a small volume element in an image; a run is a continuous scanning segment. First identify images, labels, and run IDs. Read the ANOVA explanation, then “Obtain prediction scores via cross validation.” ANOVA selects informative voxels within training; each outer fold holds out a complete run. Draw this split before running it. The result tests another run from the same participant, so it does not establish prediction for a new person. Weight maps can wait until the evaluation makes sense.
 
-The first pass through a tutorial can be reading code and figures. Running a later section still requires the preceding imports, data loading, and variable definitions; the Chinese companion guide explains the boundary for the selected Nilearn example.
+The first pass through a tutorial can be reading code and figures. Running a later section still requires the preceding imports, data loading, and variable definitions; the companion guide explains the boundary for the selected Nilearn example.
 
 ## 11) Open science/data portals/tracking funding & initiatives
 
@@ -321,7 +321,7 @@ For each paper:
 3. What kind of data was collected, and which preprocessing steps matter for the result?
 4. What does one central figure show? Which comparison supports the claim, and what alternative explanation remains?
 
-Begin with the abstract and the suggested figure or section. Explain that result before working through every method. When prediction is involved, identify the train/test split and what new data the test represents. The [reading index](资源与文献索引.md) gives 16 selected references, access information, and further questions; [references.bib](references.bib) contains their citations.
+Begin with the abstract and the suggested figure or section. Explain that result before working through every method. When prediction is involved, identify the train/test split and what new data the test represents. The [reading index](tutorial-resources.en.md) gives 16 selected references, access information, and further questions; [references.bib](references.bib) contains their citations.
 
 **Step 6: Finish a small project; competition is optional**
 
@@ -331,6 +331,6 @@ Brain-to-Text '24/'25 in Section 9 can extend this into a data-loading → model
 
 **Companion material**
 
-The [Chinese guided tutorial](计算神经科学_开放资源与分层阅读清单.md) provides longer concept explanations, bounded readings, small exercises, and worked checks for selected starting points. The [resource and literature index](资源与文献索引.md) records the supplementary sources and reading details. Use these alongside the relevant entries here; the complete original 18-category resource catalog is included in this main guide.
+The [guided tutorial](tutorial-guide.en.md) provides longer concept explanations, bounded readings, small exercises, and worked checks for selected starting points. The [resource and literature index](tutorial-resources.en.md) records the supplementary sources and reading details. Use these alongside the relevant entries here; the complete original 18-category resource catalog is included in this main guide.
 
 *Resource note: selected supplementary pages and literature were checked on 8 September 2026. Availability was not rechecked for every link from the original list. The external notebooks have not been tested here.*
